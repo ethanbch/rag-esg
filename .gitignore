@@ -13,9 +13,8 @@ wheels/
 .env
 .DS_Store
 
-# Local vector store and downloaded source files
+# Local vector store
 chroma_db/
-downloads/
 
 # Generated analysis artifacts
 *_parsed.txt
