@@ -1,0 +1,22 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Environment and local machine files
+.env
+.DS_Store
+
+# Local vector store and downloaded source files
+chroma_db/
+downloads/
+
+# Generated analysis artifacts
+*_parsed.txt
+*_csrd_analysis.txt

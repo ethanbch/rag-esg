@@ -1,0 +1,65 @@
+[
+  {
+    "question": "What are the 4 axes used to organize the SDG-linked Sustainab'ALL program at TotalEnergies?",
+    "reference_answer": "TotalEnergies’ commitment to contribute to the Sustainable Development Goals is based on 4 axes: • Climate and Sustainable Energy; • Caring for the Environment; • Acting for the Well-being of Our Employees;• Having a Positive Impact for Stakeholders.",
+    "collections": [
+      "totalenergies_sustainability_climate_2025_progress_report_2025_en"
+    ]
+  },
+  {
+    "question": "What is TotalEnergies' 2030 target for net Scope 1+2 emissions from operated activities, and how is it benchmarked?",
+    "reference_answer": "The target is a 40% reduction by 2030 versus 2015 for net Scope 1+2 emissions from operated activities. The report states this is consistent with EU Fit-for-55 (37% decrease between 2015 and 2030) and the IEA 2023 NZE scenario (31% decrease between 2015 and 2030).",
+    "collections": [
+      "totalenergies_sustainability_climate_2025_progress_report_2025_en"
+    ]
+  },
+  {
+    "question": "How did Scope 1+2 emissions from operated Oil and Gas assets evolve from 2015 to 2023?",
+    "reference_answer": "Across the 2015 scope, emissions from operated assets fell from 46 Mt CO2e in 2015 to 30 Mt CO2e in 2023, i.e. more than a 34% reduction.",
+    "collections": [
+      "totalenergies_sustainability_climate_2025_progress_report_2025_en"
+    ]
+  },
+  {
+    "question": "What change is reported for Scope 1+2 equity intensity of Upstream Oil and Gas assets between 2020 and 2023?",
+    "reference_answer": "The Scope 1+2 equity intensity decreased from 20 kg CO2e/boe in 2020 to 18 kg CO2e/boe in 2023.",
+    "collections": [
+      "totalenergies_sustainability_climate_2025_progress_report_2025_en"
+    ]
+  },
+  {
+    "question": "What does the report say about 2023 EU Taxonomy CapEx in proportional view?",
+    "reference_answer": "The report states that eligible or aligned CapEx represented more than 30% of TotalEnergies' investment in 2023 in the proportional view.",
+    "collections": [
+      "totalenergies_sustainability_climate_2025_progress_report_2025_en"
+    ]
+  },
+  {
+    "question": "What safety indicators are explicitly reported for 2023 regarding TRIR and fatalities?",
+    "reference_answer": "TRIR for employees and contractors is reported at 0.63 in 2023 (0.67 in 2022). The company also reports two accident-related fatalities in 2023 among contractor staff, while keeping a zero-fatalities goal.",
+    "collections": [
+      "totalenergies_sustainability_climate_2025_progress_report_2025_en"
+    ]
+  },
+  {
+    "question": "At what governance level are climate and sustainability issues handled according to the report?",
+    "reference_answer": "The report says climate and sustainability issues are addressed at the highest level of the organization by both the Board of Directors and the Executive Committee.",
+    "collections": [
+      "totalenergies_sustainability_climate_2025_progress_report_2025_en"
+    ]
+  },
+  {
+    "question": "What biodiversity-related commitments and disclosures are highlighted (TNFD and deforestation)?",
+    "reference_answer": "TotalEnergies is a member of the TNFD forum, participated in a sector pilot, and started mapping Nature-related Dependencies, Impacts, Risks and Opportunities for CSRD implementation. The report also states a zero net deforestation target for each new-site project added in 2022.",
+    "collections": [
+      "totalenergies_sustainability_climate_2025_progress_report_2025_en"
+    ]
+  },
+  {
+    "question": "What supplier due-diligence progress and target are reported?",
+    "reference_answer": "The report states 740 supplier audits since 2016 and a target of 1,300 suppliers audited by the end of 2025.",
+    "collections": [
+      "totalenergies_sustainability_climate_2025_progress_report_2025_en"
+    ]
+  }
+]

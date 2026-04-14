@@ -1,0 +1,313 @@
+{
+  "summary": {
+    "samples": 9,
+    "avg_rouge1_f1": 0.4871831869380374,
+    "avg_rouge2_f1": 0.2113899469971367,
+    "avg_rougeL_f1": 0.37766153616543985,
+    "model": "openai/gpt-oss-120b",
+    "embedding_model": "BAAI/bge-m3",
+    "reranker_backend": "api",
+    "reranker_model": "BAAI/bge-reranker-v2-m3",
+    "n_results_per_collection": 3,
+    "max_chunks": 8
+  },
+  "results": [
+    {
+      "sample_index": 1,
+      "question": "What are the 4 axes used to organize the SDG-linked Sustainab'ALL program at TotalEnergies?",
+      "reference_answer": "TotalEnergies’ commitment to contribute to the Sustainable Development Goals is based on 4 axes: • Climate and Sustainable Energy; • Caring for the Environment; • Acting for the Well-being of Our Employees;• Having a Positive Impact for Stakeholders.",
+      "generated_answer": "The Sustainab’ALL program is organized around four axes :\n\n1. **Climate and Sustainable Energy**  \n2. **Caring for the Environment**  \n3. **Acting for the Well‑being of Our Employees**  \n4. **Having a Positive Impact for Stakeholders**  \n\nThese four pillars structure TotalEnergies’ SDG‑linked actions [S1].",
+      "collections": [
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en"
+      ],
+      "rouge1_f1": 0.6749999999999999,
+      "rouge2_f1": 0.4615384615384615,
+      "rougeL_f1": 0.625,
+      "retrieved_chunk_count": 3,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_0",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.34488463401794434,
+          "score": 0.98582757
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_72",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.30464231967926025,
+          "score": 0.9405718
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_71",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.3457759618759155,
+          "score": 0.8621197
+        }
+      ]
+    },
+    {
+      "sample_index": 2,
+      "question": "What is TotalEnergies' 2030 target for net Scope 1+2 emissions from operated activities, and how is it benchmarked?",
+      "reference_answer": "The target is a 40% reduction by 2030 versus 2015 for net Scope 1+2 emissions from operated activities. The report states this is consistent with EU Fit-for-55 (37% decrease between 2015 and 2030) and the IEA 2023 NZE scenario (31% decrease between 2015 and 2030).",
+      "generated_answer": "TotalEnergies aims to cut the net Scope 1 + 2 CO₂ emissions from its operated activities by **40 % versus the 2015 baseline by 2030**.  \nThe company benchmarks this target against the EU “Fit‑for‑55” programme (which calls for a 37 % reduction over the same period) and the IEA 2024 Net‑Zero Emissions (NZE) scenario (which envisages a 28 % reduction)【S2】【S1】.",
+      "collections": [
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en"
+      ],
+      "rouge1_f1": 0.5504587155963302,
+      "rouge2_f1": 0.22429906542056074,
+      "rougeL_f1": 0.3853211009174312,
+      "retrieved_chunk_count": 3,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_41",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.2481071949005127,
+          "score": 0.99584997
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_42",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.26498252153396606,
+          "score": 0.98862445
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_13",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.2846253514289856,
+          "score": 0.9832145
+        }
+      ]
+    },
+    {
+      "sample_index": 3,
+      "question": "How did Scope 1+2 emissions from operated Oil and Gas assets evolve from 2015 to 2023?",
+      "reference_answer": "Across the 2015 scope, emissions from operated assets fell from 46 Mt CO2e in 2015 to 30 Mt CO2e in 2023, i.e. more than a 34% reduction.",
+      "generated_answer": "TotalEnergies’ Scope 1 + 2 emissions from its operated oil‑and‑gas facilities fell sharply after 2015. In 2015 the company reported roughly **46 Mt CO₂e**. By 2023 the figure had dropped to about **29–30 Mt CO₂e**, representing a **34 %–36 % reduction** versus the 2015 level【S1】【S2】.",
+      "collections": [
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en"
+      ],
+      "rouge1_f1": 0.48717948717948717,
+      "rouge2_f1": 0.15789473684210525,
+      "rougeL_f1": 0.358974358974359,
+      "retrieved_chunk_count": 3,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_41",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.3376675248146057,
+          "score": 0.9810946
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_107",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.368564248085022,
+          "score": 0.95759624
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_108",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.367495596408844,
+          "score": 0.9216402
+        }
+      ]
+    },
+    {
+      "sample_index": 4,
+      "question": "What change is reported for Scope 1+2 equity intensity of Upstream Oil and Gas assets between 2020 and 2023?",
+      "reference_answer": "The Scope 1+2 equity intensity decreased from 20 kg CO2e/boe in 2020 to 18 kg CO2e/boe in 2023.",
+      "generated_answer": "The report shows that the GHG‑emissions intensity (Scope 1 + 2) of TotalEnergies’ operated upstream oil‑and‑gas assets fell from **21 kg CO₂e per boe in 2020 to 17 kg CO₂e per boe in 2023**, a reduction of 4 kg CO₂e / boe【S2】.",
+      "collections": [
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en"
+      ],
+      "rouge1_f1": 0.4411764705882353,
+      "rouge2_f1": 0.21212121212121213,
+      "rougeL_f1": 0.4117647058823529,
+      "retrieved_chunk_count": 3,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_28",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.42532020807266235,
+          "score": 0.9783019
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_107",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.43019819259643555,
+          "score": 0.96160597
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_41",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.42345356941223145,
+          "score": 0.9237301
+        }
+      ]
+    },
+    {
+      "sample_index": 5,
+      "question": "What does the report say about 2023 EU Taxonomy CapEx in proportional view?",
+      "reference_answer": "The report states that eligible or aligned CapEx represented more than 30% of TotalEnergies' investment in 2023 in the proportional view.",
+      "generated_answer": "The report indicates that, when applying the EU Taxonomy in the proportional view, TotalEnergies’ eligible (and aligned) capital expenditure represented **about 33 % of its total 2023 investment**【S1】.",
+      "collections": [
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en"
+      ],
+      "rouge1_f1": 0.5714285714285715,
+      "rouge2_f1": 0.1702127659574468,
+      "rougeL_f1": 0.32653061224489793,
+      "retrieved_chunk_count": 3,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_30",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.4127061367034912,
+          "score": 0.8734309
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_41",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.4695678949356079,
+          "score": 0.0048674173
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_60",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.5010324120521545,
+          "score": 0.0033766122
+        }
+      ]
+    },
+    {
+      "sample_index": 6,
+      "question": "What safety indicators are explicitly reported for 2023 regarding TRIR and fatalities?",
+      "reference_answer": "TRIR for employees and contractors is reported at 0.63 in 2023 (0.67 in 2022). The company also reports two accident-related fatalities in 2023 among contractor staff, while keeping a zero-fatalities goal.",
+      "generated_answer": "- **TRIR (Total Recordable Injury Rate)** – 2023 TRIR was **0.63 injuries per million hours worked**【S1】.  \n- **Fatalities** – The 2023 safety data show **zero fatalities** (0 deaths) among TotalEnergies personnel【S2】.",
+      "collections": [
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en"
+      ],
+      "rouge1_f1": 0.3384615384615384,
+      "rouge2_f1": 0.0634920634920635,
+      "rougeL_f1": 0.2153846153846154,
+      "retrieved_chunk_count": 3,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_67",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.36211633682250977,
+          "score": 0.9078038
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_111",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.4069119691848755,
+          "score": 0.9014011
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_68",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.47520309686660767,
+          "score": 0.071332
+        }
+      ]
+    },
+    {
+      "sample_index": 7,
+      "question": "At what governance level are climate and sustainability issues handled according to the report?",
+      "reference_answer": "The report says climate and sustainability issues are addressed at the highest level of the organization by both the Board of Directors and the Executive Committee.",
+      "generated_answer": "Climate and sustainability issues are handled at the top‑level of TotalEnergies’ governance – the Board of Directors – through dedicated committees (the Audit Committee monitors the sustainability report and its certification, and the Compensation Committee embeds sustainability criteria in executive remuneration) and are further integrated into the Executive Committee (Comex), which ensures climate considerations are built into operational road‑maps and risk‑management processes【S1】.",
+      "collections": [
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en"
+      ],
+      "rouge1_f1": 0.4444444444444445,
+      "rouge2_f1": 0.2727272727272727,
+      "rougeL_f1": 0.37777777777777777,
+      "retrieved_chunk_count": 3,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_9",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.41302943229675293,
+          "score": 0.36624968
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_1",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.41114771366119385,
+          "score": 0.2776688
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_0",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.4345051646232605,
+          "score": 0.21850258
+        }
+      ]
+    },
+    {
+      "sample_index": 8,
+      "question": "What biodiversity-related commitments and disclosures are highlighted (TNFD and deforestation)?",
+      "reference_answer": "TotalEnergies is a member of the TNFD forum, participated in a sector pilot, and started mapping Nature-related Dependencies, Impacts, Risks and Opportunities for CSRD implementation. The report also states a zero net deforestation target for each new-site project added in 2022.",
+      "generated_answer": "- **TNFD commitment** – TotalEnergies is a member of the Taskforce on Nature‑related Financial Disclosures (TNFD) and participated in the sector‑specific pilot coordinated by the World Business Council for Sustainable Development and PwC, sharing the results with other TNFD members at COP 15 and other forums [S1].\n\n- **Deforestation commitment** – The company has a “Zero Net Deforestation” objective. In 2024 its new projects required the clearing of 156 ha of forest, while 186 ha were replanted during the same year, delivering a net‑zero impact on forest cover [S2].",
+      "collections": [
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en"
+      ],
+      "rouge1_f1": 0.4122137404580153,
+      "rouge2_f1": 0.15503875968992248,
+      "rougeL_f1": 0.3053435114503817,
+      "retrieved_chunk_count": 3,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_78",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.4597615599632263,
+          "score": 0.8429925
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_86",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.4595361351966858,
+          "score": 0.049773447
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_114",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.44686251878738403,
+          "score": 0.032774985
+        }
+      ]
+    },
+    {
+      "sample_index": 9,
+      "question": "What supplier due-diligence progress and target are reported?",
+      "reference_answer": "The report states 740 supplier audits since 2016 and a target of 1,300 suppliers audited by the end of 2025.",
+      "generated_answer": "The report states that **priority supplier audits** – the key due‑diligence activity for suppliers – have risen from 79 to 83 to 200 and have already reached 300 audits, with a **target of 300 audits**. 【S2】",
+      "collections": [
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en"
+      ],
+      "rouge1_f1": 0.4642857142857143,
+      "rouge2_f1": 0.18518518518518517,
+      "rougeL_f1": 0.39285714285714285,
+      "retrieved_chunk_count": 3,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_92",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.47110098600387573,
+          "score": 0.013171949
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_114",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.4483604431152344,
+          "score": 0.009268014
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_91",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.4687303900718689,
+          "score": 0.0042315875
+        }
+      ]
+    }
+  ]
+}
