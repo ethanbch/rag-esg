@@ -20,9 +20,9 @@ BASE_URL = "https://albert.api.etalab.gouv.fr/v1"
 DB_DIR = "./chroma_db"
 EMBEDDING_MODEL = os.getenv("EMBEDDING_MODEL", "BAAI/bge-m3")
 ALBERT_API_KEY = os.getenv("ALBERT_API_KEY")
-MIN_CHUNK_TOKENS = _get_int_env("MIN_CHUNK_TOKENS", 300)
-MAX_CHUNK_TOKENS = _get_int_env("MAX_CHUNK_TOKENS", 500)
-CHUNK_OVERLAP_TOKENS = _get_int_env("CHUNK_OVERLAP_TOKENS", 50)
+MIN_CHUNK_TOKENS = _get_int_env("MIN_CHUNK_TOKENS", 200)
+MAX_CHUNK_TOKENS = _get_int_env("MAX_CHUNK_TOKENS", 350)
+CHUNK_OVERLAP_TOKENS = _get_int_env("CHUNK_OVERLAP_TOKENS", 80)
 
 CHUNKING_STRATEGY = os.getenv("CHUNKING_STRATEGY", "token_overlap")
 SENTENCE_CHUNK_SIZE = _get_int_env("SENTENCE_CHUNK_SIZE", 8)

@@ -1,16 +1,25 @@
 import glob
 import os
 
-from config import ALBERT_API_KEY, CHUNKING_STRATEGY
+from config import ALBERT_API_KEY, CHUNKING_STRATEGY, EMBEDDING_MODEL
 from ingestion_pipeline.step01_parsing import extract_text_from_pdf
 from ingestion_pipeline.step02_chunking import chunk_pdf_text
 from ingestion_pipeline.step03_indexing import index_chunks
 
 
-def process_pdf(pdf_path, collection_name):
+def process_pdf(
+    pdf_path: str,
+    collection_name: str,
+    *,
+    api_key: str | None = None,
+    embedding_model: str = EMBEDDING_MODEL,
+) -> int | None:
     print(f"Processing {pdf_path}...")
 
-    if not ALBERT_API_KEY:
+    effective_api_key = api_key.strip() if isinstance(api_key, str) else None
+    if not effective_api_key:
+        effective_api_key = ALBERT_API_KEY
+    if not effective_api_key:
         print("Error: ALBERT_API_KEY environment variable is not set.")
         return
 
@@ -37,9 +46,15 @@ def process_pdf(pdf_path, collection_name):
     print(
         f"  Storing {len(all_chunks)} chunks in local ChromaDB collection '{collection_name}'..."
     )
-    index_chunks(collection_name, all_chunks)
+    index_chunks(
+        collection_name,
+        all_chunks,
+        embedding_model=embedding_model,
+        api_key=effective_api_key,
+    )
 
     print(f"Finished storing chunks for {pdf_path} in ChromaDB.\n")
+    return len(all_chunks)
 
 
 def main():
