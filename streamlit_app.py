@@ -619,7 +619,7 @@ def _render_sidebar() -> None:
             default_selection = valid_default or available_collections
 
             st.session_state.selected_collections = st.multiselect(
-                "Chroma collections",
+                "Documents in the knowledge base",
                 options=available_collections,
                 default=default_selection,
                 help="Select one or more collections to query.",

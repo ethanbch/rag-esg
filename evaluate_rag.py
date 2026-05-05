@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 from pathlib import Path
 from statistics import mean
@@ -8,36 +9,36 @@ from typing import Any
 
 from rouge_score import rouge_scorer
 
-from config import ALBERT_API_KEY, EMBEDDING_MODEL, RERANK_MODEL
+from config import ALBERT_API_KEY, EMBEDDING_MODEL, RERANK_BACKEND, RERANK_MODEL
 from rag_app.service import DEFAULT_CHAT_MODEL, RagRuntimeConfig, RagService
 
+DEFAULT_DATASET = Path("evaluation/rag_evaluation_dataset.csv")
+DEFAULT_OUTPUT = Path("evaluation/last_eval_report.json")
+DEFAULT_TOP_K = 3
+DEFAULT_MAX_CHUNKS = 8
 
-def _load_dataset(dataset_path: Path) -> list[dict[str, Any]]:
+
+def _load_dataset_csv(dataset_path: Path) -> list[dict[str, Any]]:
     if not dataset_path.exists():
         raise FileNotFoundError(f"Dataset file not found: {dataset_path}")
 
-    with dataset_path.open("r", encoding="utf-8") as file:
-        payload = json.load(file)
-
-    if not isinstance(payload, list):
-        raise ValueError("Dataset must be a JSON list of QA samples.")
-
     samples: list[dict[str, Any]] = []
-    for index, item in enumerate(payload):
-        if not isinstance(item, dict):
-            raise ValueError(f"Dataset item #{index} must be an object.")
+    with dataset_path.open("r", encoding="utf-8-sig", newline="") as file:
+        reader = csv.DictReader(file)
+        if not reader.fieldnames:
+            raise ValueError("Dataset CSV must include a header row.")
 
-        question = str(item.get("question", "")).strip()
-        if not question:
-            raise ValueError(f"Dataset item #{index} is missing a question.")
-
-        samples.append(item)
+        for index, row in enumerate(reader, start=1):
+            question = str(row.get("question", "")).strip()
+            if not question:
+                raise ValueError(f"Dataset row #{index} is missing a question.")
+            samples.append(row)
 
     return samples
 
 
 def _resolve_reference_answer(sample: dict[str, Any]) -> str:
-    for key in ("reference_answer", "ground_truth", "answer"):
+    for key in ("ground_truth", "reference_answer", "answer"):
         value = sample.get(key)
         if isinstance(value, str) and value.strip():
             return value.strip()
@@ -56,31 +57,20 @@ def _serialize_chunk(chunk: Any) -> dict[str, Any]:
     }
 
 
-def run_evaluation(
-    dataset_path: Path,
-    output_path: Path,
-    model: str,
-    embedding_model: str,
-    reranker_backend: str,
-    reranker_model: str,
-    n_results_per_collection: int,
-    max_chunks: int,
-    system_prompt: str | None,
-    collections: list[str] | None,
-) -> None:
+def run_evaluation(dataset_path: Path, output_path: Path) -> None:
     api_key = (ALBERT_API_KEY or "").strip()
     if not api_key:
         raise RuntimeError("ALBERT_API_KEY is required for evaluation.")
 
-    samples = _load_dataset(dataset_path)
+    samples = _load_dataset_csv(dataset_path)
 
     rag_service = RagService(
         RagRuntimeConfig(
             api_key=api_key,
-            model=model,
-            embedding_model=embedding_model,
-            reranker_backend=reranker_backend,
-            reranker_model=reranker_model,
+            model=DEFAULT_CHAT_MODEL,
+            embedding_model=EMBEDDING_MODEL,
+            reranker_backend=RERANK_BACKEND,
+            reranker_model=RERANK_MODEL,
         )
     )
 
@@ -88,89 +78,37 @@ def run_evaluation(
     if not available_collections:
         raise RuntimeError("No collections available for evaluation.")
 
-    available_collections_set = set(available_collections)
-
-    if collections:
-        missing_forced_collections = [
-            collection
-            for collection in collections
-            if collection not in available_collections_set
-        ]
-        if missing_forced_collections:
-            raise RuntimeError(
-                "Unknown collection(s) passed with --collections: "
-                f"{', '.join(missing_forced_collections)}. "
-                "Available collections are: "
-                f"{', '.join(available_collections)}"
-            )
-
-    default_collections = collections or available_collections
+    default_collections = available_collections
 
     scorer = rouge_scorer.RougeScorer(["rouge1", "rouge2", "rougeL"], use_stemmer=True)
     rows: list[dict[str, Any]] = []
 
     print(
-        f"Evaluating {len(samples)} sample(s) with model={model}, reranker={reranker_backend}, reranker_model={reranker_model}"
+        f"Evaluating {len(samples)} sample(s) with model={DEFAULT_CHAT_MODEL}, reranker={RERANK_BACKEND}, reranker_model={RERANK_MODEL}"
     )
 
     for index, sample in enumerate(samples, start=1):
         question = str(sample["question"]).strip()
         reference_answer = _resolve_reference_answer(sample)
-
-        sample_collections_raw = sample.get("collections")
-        if isinstance(sample_collections_raw, list):
-            sample_collections = [
-                str(collection).strip()
-                for collection in sample_collections_raw
-                if str(collection).strip()
-            ]
-        else:
-            sample_collections = []
-
-        missing_sample_collections = [
-            collection
-            for collection in sample_collections
-            if collection not in available_collections_set
-        ]
-        valid_sample_collections = [
-            collection
-            for collection in sample_collections
-            if collection in available_collections_set
-        ]
-
-        if missing_sample_collections:
-            print(
-                f"[{index}/{len(samples)}] Missing collection(s) in dataset sample: "
-                f"{', '.join(missing_sample_collections)}. They will be ignored."
-            )
-
-        if valid_sample_collections:
-            active_collections = valid_sample_collections
-        elif sample_collections:
-            active_collections = default_collections
-            print(
-                f"[{index}/{len(samples)}] No valid collection left for this sample; "
-                f"falling back to default collections: {', '.join(default_collections)}"
-            )
-        else:
-            active_collections = default_collections
-
         rag_answer = rag_service.ask(
             question=question,
-            collection_names=active_collections,
-            n_results_per_collection=n_results_per_collection,
-            max_chunks=max_chunks,
-            system_prompt=system_prompt,
-            reranker_backend=reranker_backend,
+            collection_names=default_collections,
+            n_results_per_collection=DEFAULT_TOP_K,
+            max_chunks=DEFAULT_MAX_CHUNKS,
+            system_prompt=None,
+            reranker_backend=RERANK_BACKEND,
         )
 
         rouge_scores = scorer.score(reference_answer, rag_answer.answer)
         row = {
             "sample_index": index,
+            "company": str(sample.get("company", "")).strip(),
             "question": question,
             "reference_answer": reference_answer,
             "generated_answer": rag_answer.answer,
-            "collections": active_collections,
+            "topic": str(sample.get("topic", "")).strip(),
+            "source_pdf": str(sample.get("source_pdf", "")).strip(),
+            "collections": default_collections,
             "rouge1_f1": rouge_scores["rouge1"].fmeasure,
             "rouge2_f1": rouge_scores["rouge2"].fmeasure,
             "rougeL_f1": rouge_scores["rougeL"].fmeasure,
@@ -190,12 +128,12 @@ def run_evaluation(
         "avg_rouge1_f1": mean(row["rouge1_f1"] for row in rows) if rows else 0.0,
         "avg_rouge2_f1": mean(row["rouge2_f1"] for row in rows) if rows else 0.0,
         "avg_rougeL_f1": mean(row["rougeL_f1"] for row in rows) if rows else 0.0,
-        "model": model,
-        "embedding_model": embedding_model,
-        "reranker_backend": reranker_backend,
-        "reranker_model": reranker_model,
-        "n_results_per_collection": n_results_per_collection,
-        "max_chunks": max_chunks,
+        "model": DEFAULT_CHAT_MODEL,
+        "embedding_model": EMBEDDING_MODEL,
+        "reranker_backend": RERANK_BACKEND,
+        "reranker_model": RERANK_MODEL,
+        "n_results_per_collection": DEFAULT_TOP_K,
+        "max_chunks": DEFAULT_MAX_CHUNKS,
     }
 
     output = {
@@ -214,68 +152,19 @@ def run_evaluation(
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Evaluate RAG answers with ROUGE metrics."
+        description="Evaluate RAG answers with ROUGE metrics from CSV."
     )
     parser.add_argument(
         "--dataset",
         type=Path,
-        default=Path("evaluation/qa_dataset.example.json"),
-        help="Path to JSON dataset with questions and reference answers.",
+        default=DEFAULT_DATASET,
+        help="Path to CSV dataset with questions and reference answers.",
     )
     parser.add_argument(
         "--output",
         type=Path,
-        default=Path("evaluation/last_eval_report.json"),
+        default=DEFAULT_OUTPUT,
         help="Path to write the evaluation report.",
-    )
-    parser.add_argument(
-        "--model",
-        type=str,
-        default=DEFAULT_CHAT_MODEL,
-        help="Chat model used for generation.",
-    )
-    parser.add_argument(
-        "--embedding-model",
-        type=str,
-        default=EMBEDDING_MODEL,
-        help="Embedding model used for retrieval and reranking.",
-    )
-    parser.add_argument(
-        "--reranker-backend",
-        type=str,
-        default="api",
-        choices=["api", "none", "cosine"],
-        help="Reranker backend used post-retrieval.",
-    )
-    parser.add_argument(
-        "--reranker-model",
-        type=str,
-        default=RERANK_MODEL,
-        help="Reranker model used by API backend.",
-    )
-    parser.add_argument(
-        "--n-results",
-        type=int,
-        default=3,
-        help="Chunks retrieved per collection before reranking.",
-    )
-    parser.add_argument(
-        "--max-chunks",
-        type=int,
-        default=8,
-        help="Max chunks kept in final context.",
-    )
-    parser.add_argument(
-        "--system-prompt",
-        type=str,
-        default=None,
-        help="Optional system prompt override for generation.",
-    )
-    parser.add_argument(
-        "--collections",
-        nargs="*",
-        default=None,
-        help="Optional list of collection names to force for all samples.",
     )
     return parser.parse_args()
 
@@ -285,14 +174,6 @@ def main() -> None:
     run_evaluation(
         dataset_path=args.dataset,
         output_path=args.output,
-        model=args.model,
-        embedding_model=args.embedding_model,
-        reranker_backend=args.reranker_backend,
-        reranker_model=args.reranker_model,
-        n_results_per_collection=args.n_results,
-        max_chunks=args.max_chunks,
-        system_prompt=args.system_prompt,
-        collections=args.collections,
     )
 
 

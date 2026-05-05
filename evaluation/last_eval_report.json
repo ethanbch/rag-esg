@@ -1,9 +1,9 @@
 {
   "summary": {
-    "samples": 9,
-    "avg_rouge1_f1": 0.4871831869380374,
-    "avg_rouge2_f1": 0.2113899469971367,
-    "avg_rougeL_f1": 0.37766153616543985,
+    "samples": 50,
+    "avg_rouge1_f1": 0.3718003181458868,
+    "avg_rouge2_f1": 0.22246695763781105,
+    "avg_rougeL_f1": 0.33107750724077956,
     "model": "openai/gpt-oss-120b",
     "embedding_model": "BAAI/bge-m3",
     "reranker_backend": "api",
@@ -14,298 +14,3801 @@
   "results": [
     {
       "sample_index": 1,
-      "question": "What are the 4 axes used to organize the SDG-linked Sustainab'ALL program at TotalEnergies?",
-      "reference_answer": "TotalEnergies’ commitment to contribute to the Sustainable Development Goals is based on 4 axes: • Climate and Sustainable Energy; • Caring for the Environment; • Acting for the Well-being of Our Employees;• Having a Positive Impact for Stakeholders.",
-      "generated_answer": "The Sustainab’ALL program is organized around four axes :\n\n1. **Climate and Sustainable Energy**  \n2. **Caring for the Environment**  \n3. **Acting for the Well‑being of Our Employees**  \n4. **Having a Positive Impact for Stakeholders**  \n\nThese four pillars structure TotalEnergies’ SDG‑linked actions [S1].",
+      "company": "TotalEnergies",
+      "question": "What is the annual CO₂e reduction that TotalEnergies expects to achieve by aiming for zero methane emissions in 2025 and 2026?",
+      "reference_answer": "160 kt CO₂e per year",
+      "generated_answer": "The provided excerpts do not contain any information about TotalEnergies’ target of zero methane emissions for 2025‑2026 or the associated annual CO₂e reduction it expects to achieve. Therefore, I cannot answer the question from the given context.",
+      "topic": "emissions",
+      "source_pdf": "src\\data\\scraped_pdfs\\totalenergies.pdf",
       "collections": [
-        "totalenergies_sustainability_climate_2025_progress_report_2025_en"
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
       ],
-      "rouge1_f1": 0.6749999999999999,
-      "rouge2_f1": 0.4615384615384615,
-      "rougeL_f1": 0.625,
-      "retrieved_chunk_count": 3,
+      "rouge1_f1": 0.08888888888888889,
+      "rouge2_f1": 0.046511627906976744,
+      "rougeL_f1": 0.08888888888888889,
+      "retrieved_chunk_count": 8,
       "retrieved_chunks": [
         {
-          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_0",
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_43",
           "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
-          "distance": 0.34488463401794434,
-          "score": 0.98582757
+          "distance": 0.3051300644874573,
+          "score": 0.9908035
         },
         {
-          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_72",
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_42",
           "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
-          "distance": 0.30464231967926025,
-          "score": 0.9405718
+          "distance": 0.2930808663368225,
+          "score": 0.9717254
         },
         {
-          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_71",
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_13",
           "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
-          "distance": 0.3457759618759155,
-          "score": 0.8621197
+          "distance": 0.3068894147872925,
+          "score": 0.950411
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_33",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.470577597618103,
+          "score": 0.7673414
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_9",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.44043636322021484,
+          "score": 0.6818327
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_8",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.4282914400100708,
+          "score": 0.647018
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_220",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.4618051052093506,
+          "score": 0.60620713
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_51",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.4569895267486572,
+          "score": 0.37376153
         }
       ]
     },
     {
       "sample_index": 2,
-      "question": "What is TotalEnergies' 2030 target for net Scope 1+2 emissions from operated activities, and how is it benchmarked?",
-      "reference_answer": "The target is a 40% reduction by 2030 versus 2015 for net Scope 1+2 emissions from operated activities. The report states this is consistent with EU Fit-for-55 (37% decrease between 2015 and 2030) and the IEA 2023 NZE scenario (31% decrease between 2015 and 2030).",
-      "generated_answer": "TotalEnergies aims to cut the net Scope 1 + 2 CO₂ emissions from its operated activities by **40 % versus the 2015 baseline by 2030**.  \nThe company benchmarks this target against the EU “Fit‑for‑55” programme (which calls for a 37 % reduction over the same period) and the IEA 2024 Net‑Zero Emissions (NZE) scenario (which envisages a 28 % reduction)【S2】【S1】.",
+      "company": "TotalEnergies",
+      "question": "Which internal committee is tasked with analysing climate‑related risks and aligning TotalEnergies’ risk mapping with the TCFD recommendations?",
+      "reference_answer": "The TotalEnergies Risk Management Committee (TRMC)",
+      "generated_answer": "The **TotalEnergies Risk Management Committee (TRMC)** is responsible for analysing climate‑related risks and ensuring that the company’s risk‑mapping is regularly updated in line with the Taskforce on Climate‑related Financial Disclosures (TCFD) recommendations【S1】.",
+      "topic": "governance",
+      "source_pdf": "src\\data\\scraped_pdfs\\totalenergies.pdf",
       "collections": [
-        "totalenergies_sustainability_climate_2025_progress_report_2025_en"
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
       ],
-      "rouge1_f1": 0.5504587155963302,
-      "rouge2_f1": 0.22429906542056074,
-      "rougeL_f1": 0.3853211009174312,
-      "retrieved_chunk_count": 3,
+      "rouge1_f1": 0.27906976744186046,
+      "rouge2_f1": 0.24390243902439027,
+      "rougeL_f1": 0.27906976744186046,
+      "retrieved_chunk_count": 8,
       "retrieved_chunks": [
         {
-          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_41",
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_31",
           "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
-          "distance": 0.2481071949005127,
-          "score": 0.99584997
+          "distance": 0.3461517095565796,
+          "score": 0.9776285
         },
         {
-          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_42",
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_9",
           "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
-          "distance": 0.26498252153396606,
-          "score": 0.98862445
+          "distance": 0.3496209979057312,
+          "score": 0.9718326
         },
         {
-          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_13",
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_8",
           "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
-          "distance": 0.2846253514289856,
-          "score": 0.9832145
+          "distance": 0.40083783864974976,
+          "score": 0.9590777
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_259",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.4662713408470154,
+          "score": 0.88463867
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_190",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.47148317098617554,
+          "score": 0.8677098
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_247",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.48447078466415405,
+          "score": 0.71102977
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_92",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.5095834732055664,
+          "score": 0.6337503
+        },
+        {
+          "chunk_id": "sustainability-statement_34",
+          "collection_name": "sustainability_statement",
+          "distance": 0.5383899807929993,
+          "score": 0.6317079
         }
       ]
     },
     {
       "sample_index": 3,
-      "question": "How did Scope 1+2 emissions from operated Oil and Gas assets evolve from 2015 to 2023?",
-      "reference_answer": "Across the 2015 scope, emissions from operated assets fell from 46 Mt CO2e in 2015 to 30 Mt CO2e in 2023, i.e. more than a 34% reduction.",
-      "generated_answer": "TotalEnergies’ Scope 1 + 2 emissions from its operated oil‑and‑gas facilities fell sharply after 2015. In 2015 the company reported roughly **46 Mt CO₂e**. By 2023 the figure had dropped to about **29–30 Mt CO₂e**, representing a **34 %–36 % reduction** versus the 2015 level【S1】【S2】.",
+      "company": "TotalEnergies",
+      "question": "What carbon price does TotalEnergies use in its investment criteria to assess project profitability under a Paris‑Agreement‑compatible scenario?",
+      "reference_answer": "$100 per ton of CO₂e (or the prevailing higher price in a given country)",
+      "generated_answer": "TotalEnergies evaluates project profitability using a carbon price of **US $100 per tonne of CO₂e** (or the higher prevailing price in a given country) within its Paris‑Agreement‑compatible scenario 【S1】.",
+      "topic": "taxonomy",
+      "source_pdf": "src\\data\\scraped_pdfs\\totalenergies.pdf",
       "collections": [
-        "totalenergies_sustainability_climate_2025_progress_report_2025_en"
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
       ],
-      "rouge1_f1": 0.48717948717948717,
-      "rouge2_f1": 0.15789473684210525,
-      "rougeL_f1": 0.358974358974359,
-      "retrieved_chunk_count": 3,
+      "rouge1_f1": 0.5957446808510638,
+      "rouge2_f1": 0.4,
+      "rougeL_f1": 0.5531914893617021,
+      "retrieved_chunk_count": 8,
       "retrieved_chunks": [
         {
-          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_41",
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_25",
           "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
-          "distance": 0.3376675248146057,
-          "score": 0.9810946
+          "distance": 0.3101475238800049,
+          "score": 0.99828595
         },
         {
-          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_107",
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_28",
           "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
-          "distance": 0.368564248085022,
-          "score": 0.95759624
+          "distance": 0.3224210739135742,
+          "score": 0.98662347
         },
         {
-          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_108",
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_63",
           "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
-          "distance": 0.367495596408844,
-          "score": 0.9216402
+          "distance": 0.3195837140083313,
+          "score": 0.8358858
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_39",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.46160417795181274,
+          "score": 0.20577459
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_3",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.4280920624732971,
+          "score": 0.12252322
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_47",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.48392659425735474,
+          "score": 0.08269734
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_4",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.4234315752983093,
+          "score": 0.07765744
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_221",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.43663203716278076,
+          "score": 0.03971326
         }
       ]
     },
     {
       "sample_index": 4,
-      "question": "What change is reported for Scope 1+2 equity intensity of Upstream Oil and Gas assets between 2020 and 2023?",
-      "reference_answer": "The Scope 1+2 equity intensity decreased from 20 kg CO2e/boe in 2020 to 18 kg CO2e/boe in 2023.",
-      "generated_answer": "The report shows that the GHG‑emissions intensity (Scope 1 + 2) of TotalEnergies’ operated upstream oil‑and‑gas assets fell from **21 kg CO₂e per boe in 2020 to 17 kg CO₂e per boe in 2023**, a reduction of 4 kg CO₂e / boe【S2】.",
+      "company": "TotalEnergies",
+      "question": "What was TotalEnergies’ Total Recordable Injury Rate (TRIR) for 2024, expressed per million hours worked?",
+      "reference_answer": "0.55 per million hours worked",
+      "generated_answer": "TotalEnergies’ Total Recordable Injury Rate (TRIR) for 2024 was **0.55 recorded injuries per million hours worked**【S1】【S2】.",
+      "topic": "social",
+      "source_pdf": "src\\data\\scraped_pdfs\\totalenergies.pdf",
       "collections": [
-        "totalenergies_sustainability_climate_2025_progress_report_2025_en"
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
       ],
-      "rouge1_f1": 0.4411764705882353,
-      "rouge2_f1": 0.21212121212121213,
-      "rougeL_f1": 0.4117647058823529,
-      "retrieved_chunk_count": 3,
+      "rouge1_f1": 0.4799999999999999,
+      "rouge2_f1": 0.3478260869565218,
+      "rougeL_f1": 0.4799999999999999,
+      "retrieved_chunk_count": 8,
       "retrieved_chunks": [
         {
-          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_28",
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_67",
           "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
-          "distance": 0.42532020807266235,
-          "score": 0.9783019
+          "distance": 0.3803819417953491,
+          "score": 0.99946004
         },
         {
-          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_107",
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_111",
           "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
-          "distance": 0.43019819259643555,
-          "score": 0.96160597
+          "distance": 0.38916081190109253,
+          "score": 0.9755769
         },
         {
-          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_41",
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_69",
           "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
-          "distance": 0.42345356941223145,
-          "score": 0.9237301
+          "distance": 0.38845956325531006,
+          "score": 0.9014011
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_91",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.47272956371307373,
+          "score": 0.7829945
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_184",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.48976773023605347,
+          "score": 0.73772544
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_302",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.5181297063827515,
+          "score": 0.40444866
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_90",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.47356879711151123,
+          "score": 0.2683658
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_183",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.4979214668273926,
+          "score": 0.26057756
         }
       ]
     },
     {
       "sample_index": 5,
-      "question": "What does the report say about 2023 EU Taxonomy CapEx in proportional view?",
-      "reference_answer": "The report states that eligible or aligned CapEx represented more than 30% of TotalEnergies' investment in 2023 in the proportional view.",
-      "generated_answer": "The report indicates that, when applying the EU Taxonomy in the proportional view, TotalEnergies’ eligible (and aligned) capital expenditure represented **about 33 % of its total 2023 investment**【S1】.",
+      "company": "TotalEnergies",
+      "question": "What is the reported carbon intensity of the Marsa LNG plant in Oman, and how does it compare to the average carbon intensity of LNG plants worldwide?",
+      "reference_answer": "Less than 3 kg CO₂e per barrel of oil equivalent (boe), which is over 90 % lower than the world average of about 35 kg CO₂e/boe.",
+      "generated_answer": "The Marsa LNG project in Oman is designed to emit **less than 3 kg CO₂‑eq per barrel of oil‑equivalent (boe)**. By contrast, the **average LNG plant worldwide emits about 35 kg CO₂‑eq/boe** — so Marsa LNG’s carbon intensity is roughly 30 kg CO₂‑eq/boe lower, i.e., more than 90 % lower than the global average【S1】.",
+      "topic": "other",
+      "source_pdf": "src\\data\\scraped_pdfs\\totalenergies.pdf",
       "collections": [
-        "totalenergies_sustainability_climate_2025_progress_report_2025_en"
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
       ],
-      "rouge1_f1": 0.5714285714285715,
-      "rouge2_f1": 0.1702127659574468,
-      "rougeL_f1": 0.32653061224489793,
-      "retrieved_chunk_count": 3,
+      "rouge1_f1": 0.5168539325842696,
+      "rouge2_f1": 0.3448275862068966,
+      "rougeL_f1": 0.40449438202247195,
+      "retrieved_chunk_count": 8,
       "retrieved_chunks": [
         {
-          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_30",
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_19",
           "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
-          "distance": 0.4127061367034912,
-          "score": 0.8734309
+          "distance": 0.313585102558136,
+          "score": 0.9983516
         },
         {
-          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_41",
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_20",
           "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
-          "distance": 0.4695678949356079,
-          "score": 0.0048674173
+          "distance": 0.29890501499176025,
+          "score": 0.91398406
         },
         {
-          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_60",
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_10",
           "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
-          "distance": 0.5010324120521545,
-          "score": 0.0033766122
+          "distance": 0.3805675506591797,
+          "score": 0.60264635
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_9",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.49367082118988037,
+          "score": 0.054298937
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_78",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.5159240961074829,
+          "score": 0.02838212
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_218",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.4806298613548279,
+          "score": 0.02800752
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_266",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.4783654808998108,
+          "score": 0.027220903
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_42",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.5301639437675476,
+          "score": 0.025809623
         }
       ]
     },
     {
       "sample_index": 6,
-      "question": "What safety indicators are explicitly reported for 2023 regarding TRIR and fatalities?",
-      "reference_answer": "TRIR for employees and contractors is reported at 0.63 in 2023 (0.67 in 2022). The company also reports two accident-related fatalities in 2023 among contractor staff, while keeping a zero-fatalities goal.",
-      "generated_answer": "- **TRIR (Total Recordable Injury Rate)** – 2023 TRIR was **0.63 injuries per million hours worked**【S1】.  \n- **Fatalities** – The 2023 safety data show **zero fatalities** (0 deaths) among TotalEnergies personnel【S2】.",
+      "company": "BNP Paribas",
+      "question": "What percentage of BNP Paribas' credit exposure to energy production was low‑carbon energy at the end of September 2024, and what was the total euro amount of that exposure?",
+      "reference_answer": "76% and €36.8 billion",
+      "generated_answer": "At the end of September 2024, low‑carbon energy made up **76 %** of BNP Paribas’ credit exposure to energy production, corresponding to a total exposure of **€36.8 billion**【S1】.",
+      "topic": "emissions",
+      "source_pdf": "src\\data\\scraped_pdfs\\bnp-paribas.pdf",
       "collections": [
-        "totalenergies_sustainability_climate_2025_progress_report_2025_en"
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
       ],
-      "rouge1_f1": 0.3384615384615384,
-      "rouge2_f1": 0.0634920634920635,
-      "rougeL_f1": 0.2153846153846154,
-      "retrieved_chunk_count": 3,
+      "rouge1_f1": 0.2285714285714286,
+      "rouge2_f1": 0.1212121212121212,
+      "rougeL_f1": 0.2285714285714286,
+      "retrieved_chunk_count": 8,
       "retrieved_chunks": [
         {
-          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_67",
-          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
-          "distance": 0.36211633682250977,
-          "score": 0.9078038
+          "chunk_id": "bnp_paribas_integrated_report_2024_en_bd_1_59",
+          "collection_name": "bnp_paribas_integrated_report_2024_en_bd_1",
+          "distance": 0.355341374874115,
+          "score": 0.9993905
         },
         {
-          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_111",
-          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
-          "distance": 0.4069119691848755,
-          "score": 0.9014011
+          "chunk_id": "bnp_paribas_integrated_report_2024_en_bd_1_6",
+          "collection_name": "bnp_paribas_integrated_report_2024_en_bd_1",
+          "distance": 0.3612027168273926,
+          "score": 0.9932288
         },
         {
-          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_68",
+          "chunk_id": "bnp_paribas_integrated_report_2024_en_bd_1_11",
+          "collection_name": "bnp_paribas_integrated_report_2024_en_bd_1",
+          "distance": 0.35705459117889404,
+          "score": 0.94197524
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_101",
           "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
-          "distance": 0.47520309686660767,
-          "score": 0.071332
+          "distance": 0.4238101840019226,
+          "score": 0.6018861
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_6",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.41942405700683594,
+          "score": 0.5629575
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_150",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.46133214235305786,
+          "score": 0.3761647
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_149",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.45701366662979126,
+          "score": 0.3501991
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_14",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.4207017421722412,
+          "score": 0.34356195
         }
       ]
     },
     {
       "sample_index": 7,
-      "question": "At what governance level are climate and sustainability issues handled according to the report?",
-      "reference_answer": "The report says climate and sustainability issues are addressed at the highest level of the organization by both the Board of Directors and the Executive Committee.",
-      "generated_answer": "Climate and sustainability issues are handled at the top‑level of TotalEnergies’ governance – the Board of Directors – through dedicated committees (the Audit Committee monitors the sustainability report and its certification, and the Compensation Committee embeds sustainability criteria in executive remuneration) and are further integrated into the Executive Committee (Comex), which ensures climate considerations are built into operational road‑maps and risk‑management processes【S1】.",
+      "company": "BNP Paribas",
+      "question": "How many members sit on BNP Paribas' Board of Directors and how many of them represent employee shareholders?",
+      "reference_answer": "14 members; one represents employee shareholders",
+      "generated_answer": "BNP Paribas’ Board of Directors has **14 members** in total 【S1】【S2】, of which **one member represents employee shareholders** 【S1】.",
+      "topic": "governance",
+      "source_pdf": "src\\data\\scraped_pdfs\\bnp-paribas.pdf",
       "collections": [
-        "totalenergies_sustainability_climate_2025_progress_report_2025_en"
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
       ],
-      "rouge1_f1": 0.4444444444444445,
-      "rouge2_f1": 0.2727272727272727,
-      "rougeL_f1": 0.37777777777777777,
-      "retrieved_chunk_count": 3,
+      "rouge1_f1": 0.4615384615384615,
+      "rouge2_f1": 0.25,
+      "rougeL_f1": 0.4615384615384615,
+      "retrieved_chunk_count": 8,
       "retrieved_chunks": [
         {
-          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_9",
-          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
-          "distance": 0.41302943229675293,
-          "score": 0.36624968
+          "chunk_id": "bnp_paribas_integrated_report_2024_en_bd_1_35",
+          "collection_name": "bnp_paribas_integrated_report_2024_en_bd_1",
+          "distance": 0.2901613712310791,
+          "score": 0.9993905
         },
         {
-          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_1",
-          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
-          "distance": 0.41114771366119385,
-          "score": 0.2776688
+          "chunk_id": "bnp_paribas_integrated_report_2024_en_bd_1_32",
+          "collection_name": "bnp_paribas_integrated_report_2024_en_bd_1",
+          "distance": 0.28169578313827515,
+          "score": 0.9956346
         },
         {
-          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_0",
+          "chunk_id": "bnp_paribas_integrated_report_2024_en_bd_1_36",
+          "collection_name": "bnp_paribas_integrated_report_2024_en_bd_1",
+          "distance": 0.3035438656806946,
+          "score": 0.97298527
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_10",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.38019388914108276,
+          "score": 0.21174264
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_446",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.45984935760498047,
+          "score": 0.046724956
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_94",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.43120306730270386,
+          "score": 0.044348583
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_11",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.4317580461502075,
+          "score": 0.041307304
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_69",
           "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
-          "distance": 0.4345051646232605,
-          "score": 0.21850258
+          "distance": 0.5071860551834106,
+          "score": 0.04069295
         }
       ]
     },
     {
       "sample_index": 8,
-      "question": "What biodiversity-related commitments and disclosures are highlighted (TNFD and deforestation)?",
-      "reference_answer": "TotalEnergies is a member of the TNFD forum, participated in a sector pilot, and started mapping Nature-related Dependencies, Impacts, Risks and Opportunities for CSRD implementation. The report also states a zero net deforestation target for each new-site project added in 2022.",
-      "generated_answer": "- **TNFD commitment** – TotalEnergies is a member of the Taskforce on Nature‑related Financial Disclosures (TNFD) and participated in the sector‑specific pilot coordinated by the World Business Council for Sustainable Development and PwC, sharing the results with other TNFD members at COP 15 and other forums [S1].\n\n- **Deforestation commitment** – The company has a “Zero Net Deforestation” objective. In 2024 its new projects required the clearing of 156 ha of forest, while 186 ha were replanted during the same year, delivering a net‑zero impact on forest cover [S2].",
+      "company": "BNP Paribas",
+      "question": "Since which year has BNP Paribas been aligning its investment portfolios with trajectories consistent with the Paris Climate Agreement?",
+      "reference_answer": "Since 2022",
+      "generated_answer": "BNP Paribas has been aligning its portfolios with trajectories consistent with the Paris Climate Agreement since 2022 【S1】.",
+      "topic": "taxonomy",
+      "source_pdf": "src\\data\\scraped_pdfs\\bnp-paribas.pdf",
       "collections": [
-        "totalenergies_sustainability_climate_2025_progress_report_2025_en"
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
       ],
-      "rouge1_f1": 0.4122137404580153,
-      "rouge2_f1": 0.15503875968992248,
-      "rougeL_f1": 0.3053435114503817,
-      "retrieved_chunk_count": 3,
+      "rouge1_f1": 0.19999999999999998,
+      "rouge2_f1": 0.1111111111111111,
+      "rougeL_f1": 0.19999999999999998,
+      "retrieved_chunk_count": 8,
       "retrieved_chunks": [
         {
-          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_78",
-          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
-          "distance": 0.4597615599632263,
-          "score": 0.8429925
+          "chunk_id": "bnp_paribas_integrated_report_2024_en_bd_1_59",
+          "collection_name": "bnp_paribas_integrated_report_2024_en_bd_1",
+          "distance": 0.3606647849082947,
+          "score": 0.9993411
         },
         {
-          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_86",
-          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
-          "distance": 0.4595361351966858,
-          "score": 0.049773447
+          "chunk_id": "bnp_paribas_integrated_report_2024_en_bd_1_6",
+          "collection_name": "bnp_paribas_integrated_report_2024_en_bd_1",
+          "distance": 0.3435881733894348,
+          "score": 0.89478946
         },
         {
-          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_114",
+          "chunk_id": "bnp_paribas_integrated_report_2024_en_bd_1_21",
+          "collection_name": "bnp_paribas_integrated_report_2024_en_bd_1",
+          "distance": 0.3513000011444092,
+          "score": 0.85776806
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_25",
           "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
-          "distance": 0.44686251878738403,
-          "score": 0.032774985
+          "distance": 0.4678639769554138,
+          "score": 0.50977963
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_7",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.4972894787788391,
+          "score": 0.5071368
+        },
+        {
+          "chunk_id": "sustainability-statement_171",
+          "collection_name": "sustainability_statement",
+          "distance": 0.5140472650527954,
+          "score": 0.24148938
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_3",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.5035160779953003,
+          "score": 0.19452077
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_39",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.46827781200408936,
+          "score": 0.17553808
         }
       ]
     },
     {
       "sample_index": 9,
-      "question": "What supplier due-diligence progress and target are reported?",
-      "reference_answer": "The report states 740 supplier audits since 2016 and a target of 1,300 suppliers audited by the end of 2025.",
-      "generated_answer": "The report states that **priority supplier audits** – the key due‑diligence activity for suppliers – have risen from 79 to 83 to 200 and have already reached 300 audits, with a **target of 300 audits**. 【S2】",
+      "company": "BNP Paribas",
+      "question": "How many new impact bonds did BNP Paribas structure in 2024 and what was their combined nominal value?",
+      "reference_answer": "Four impact bonds; €10.5 million",
+      "generated_answer": "BNP Paribas structured **four** new impact bonds in 2024, with a **combined nominal value of €10.5 million**【S1】.",
+      "topic": "social",
+      "source_pdf": "src\\data\\scraped_pdfs\\bnp-paribas.pdf",
       "collections": [
-        "totalenergies_sustainability_climate_2025_progress_report_2025_en"
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
       ],
-      "rouge1_f1": 0.4642857142857143,
-      "rouge2_f1": 0.18518518518518517,
-      "rougeL_f1": 0.39285714285714285,
-      "retrieved_chunk_count": 3,
+      "rouge1_f1": 0.4799999999999999,
+      "rouge2_f1": 0.2608695652173913,
+      "rougeL_f1": 0.4799999999999999,
+      "retrieved_chunk_count": 8,
       "retrieved_chunks": [
         {
-          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_92",
-          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
-          "distance": 0.47110098600387573,
-          "score": 0.013171949
+          "chunk_id": "bnp_paribas_integrated_report_2024_en_bd_1_66",
+          "collection_name": "bnp_paribas_integrated_report_2024_en_bd_1",
+          "distance": 0.35920828580856323,
+          "score": 0.9984633
         },
         {
-          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_114",
-          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
-          "distance": 0.4483604431152344,
-          "score": 0.009268014
+          "chunk_id": "bnp_paribas_integrated_report_2024_en_bd_1_10",
+          "collection_name": "bnp_paribas_integrated_report_2024_en_bd_1",
+          "distance": 0.37415122985839844,
+          "score": 0.9378969
         },
         {
-          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_91",
+          "chunk_id": "bnp_paribas_integrated_report_2024_en_bd_1_21",
+          "collection_name": "bnp_paribas_integrated_report_2024_en_bd_1",
+          "distance": 0.37381088733673096,
+          "score": 0.9293122
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_13",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.5131679773330688,
+          "score": 0.23722234
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_394",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.4181729555130005,
+          "score": 0.19806418
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_141",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.48983585834503174,
+          "score": 0.13986565
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_36",
           "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
-          "distance": 0.4687303900718689,
-          "score": 0.0042315875
+          "distance": 0.5133242607116699,
+          "score": 0.12592277
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_438",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.4460866451263428,
+          "score": 0.095518075
+        }
+      ]
+    },
+    {
+      "sample_index": 10,
+      "company": "BNP Paribas",
+      "question": "In which country did BNP Paribas Bank Polska co‑finance McCain’s regenerative agriculture programme until 2027, and what premium does McCain pay farmers per tonne delivered from regenerative‑agriculture fields?",
+      "reference_answer": "Poland; €5 per tonne",
+      "generated_answer": "BNP Paribas Bank Polska co‑finances the programme in **Poland**, and McCain pays a **€5 per tonne** premium for potatoes delivered from regenerative‑agriculture fields【S1】.",
+      "topic": "biodiversity",
+      "source_pdf": "src\\data\\scraped_pdfs\\bnp-paribas.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.2666666666666667,
+      "rouge2_f1": 0.14285714285714285,
+      "rougeL_f1": 0.2666666666666667,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "bnp_paribas_integrated_report_2024_en_bd_1_54",
+          "collection_name": "bnp_paribas_integrated_report_2024_en_bd_1",
+          "distance": 0.3066260814666748,
+          "score": 0.99910307
+        },
+        {
+          "chunk_id": "bnp_paribas_integrated_report_2024_en_bd_1_58",
+          "collection_name": "bnp_paribas_integrated_report_2024_en_bd_1",
+          "distance": 0.4058365821838379,
+          "score": 0.8601343
+        },
+        {
+          "chunk_id": "bnp_paribas_integrated_report_2024_en_bd_1_53",
+          "collection_name": "bnp_paribas_integrated_report_2024_en_bd_1",
+          "distance": 0.36612147092819214,
+          "score": 0.42369646
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_321",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.5075040459632874,
+          "score": 0.031678624
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_499",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.4981028437614441,
+          "score": 0.024191486
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_16",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.5573961734771729,
+          "score": 0.014672035
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_164",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.5316354036331177,
+          "score": 0.010248601
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_474",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.5798752903938293,
+          "score": 0.006097562
+        }
+      ]
+    },
+    {
+      "sample_index": 11,
+      "company": "Airbus",
+      "question": "What is Airbus's absolute CO2 emissions reduction target for Scope 1 and 2 by 2030 compared to the 2015 baseline?",
+      "reference_answer": "-63% absolute reduction",
+      "generated_answer": "Airbus aims to cut its absolute Scope 1 and Scope 2 CO₂ emissions by **25 % by 2030** relative to the 2015 baseline【S1】.",
+      "topic": "emissions",
+      "source_pdf": "src\\data\\scraped_pdfs\\airbus.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.07692307692307691,
+      "rouge2_f1": 0.0,
+      "rougeL_f1": 0.07692307692307691,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "2025_Airbus_Pioneering_sustainable_aerospace_publication_13",
+          "collection_name": "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+          "distance": 0.3225651979446411,
+          "score": 0.9873262
+        },
+        {
+          "chunk_id": "2025_Airbus_Pioneering_sustainable_aerospace_publication_11",
+          "collection_name": "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+          "distance": 0.3431670665740967,
+          "score": 0.9601375
+        },
+        {
+          "chunk_id": "2025_Airbus_Pioneering_sustainable_aerospace_publication_6",
+          "collection_name": "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+          "distance": 0.34584516286849976,
+          "score": 0.94458723
+        },
+        {
+          "chunk_id": "sustainability-statement_41",
+          "collection_name": "sustainability_statement",
+          "distance": 0.38269972801208496,
+          "score": 0.9396923
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_58",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.3941836953163147,
+          "score": 0.9114953
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_50",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.3766169548034668,
+          "score": 0.90105337
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_41",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.3834131956100464,
+          "score": 0.83169055
+        },
+        {
+          "chunk_id": "sustainability-statement_42",
+          "collection_name": "sustainability_statement",
+          "distance": 0.3777182698249817,
+          "score": 0.7277821
+        }
+      ]
+    },
+    {
+      "sample_index": 12,
+      "company": "Airbus",
+      "question": "Which international standards and principles does Airbus reference in its Human Rights Policy?",
+      "reference_answer": "UN Guiding Principles on Business and Human Rights, OECD Guidelines for Multinational Enterprises, and the International Labour Organization’s Declaration on Fundamental Principles and Rights at Work",
+      "generated_answer": "Airbus ties its human‑rights commitments to internationally recognised instruments, specifically the **Arms Trade Treaty** and the **Geneva Conventions** (included as standard conditions of sale for its defence products) [S1].",
+      "topic": "governance",
+      "source_pdf": "src\\data\\scraped_pdfs\\airbus.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.2105263157894737,
+      "rouge2_f1": 0.07272727272727274,
+      "rougeL_f1": 0.14035087719298248,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "2025_Airbus_Pioneering_sustainable_aerospace_publication_15",
+          "collection_name": "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+          "distance": 0.3092278838157654,
+          "score": 0.79182106
+        },
+        {
+          "chunk_id": "2025_Airbus_Pioneering_sustainable_aerospace_publication_16",
+          "collection_name": "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+          "distance": 0.3334028124809265,
+          "score": 0.5563694
+        },
+        {
+          "chunk_id": "2025_Airbus_Pioneering_sustainable_aerospace_publication_4",
+          "collection_name": "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+          "distance": 0.3455541729927063,
+          "score": 0.46578234
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_89",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.4762204885482788,
+          "score": 0.39987022
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_88",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.5179097652435303,
+          "score": 0.15934819
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_130",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.48335522413253784,
+          "score": 0.085403666
+        },
+        {
+          "chunk_id": "sustainability-statement_173",
+          "collection_name": "sustainability_statement",
+          "distance": 0.4588770866394043,
+          "score": 0.056029383
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_168",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.4406420588493347,
+          "score": 0.04248321
+        }
+      ]
+    },
+    {
+      "sample_index": 13,
+      "company": "Airbus",
+      "question": "What share of direct electricity supply does Airbus aim to obtain from renewable or low‑carbon sources for all its European sites by 2030?",
+      "reference_answer": "At least 90%",
+      "generated_answer": "Airbus aims to secure **at least 90 %** of its direct electricity supply from renewable or low‑carbon sources for all its European sites by 2030【S1】.",
+      "topic": "taxonomy",
+      "source_pdf": "src\\data\\scraped_pdfs\\airbus.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.20689655172413793,
+      "rouge2_f1": 0.14814814814814814,
+      "rougeL_f1": 0.20689655172413793,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "2025_Airbus_Pioneering_sustainable_aerospace_publication_13",
+          "collection_name": "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+          "distance": 0.2867125868797302,
+          "score": 0.9995876
+        },
+        {
+          "chunk_id": "2025_Airbus_Pioneering_sustainable_aerospace_publication_6",
+          "collection_name": "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+          "distance": 0.2898443937301636,
+          "score": 0.86759764
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_3",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.391404390335083,
+          "score": 0.84156543
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_56",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.3756425976753235,
+          "score": 0.4525964
+        },
+        {
+          "chunk_id": "2025_Airbus_Pioneering_sustainable_aerospace_publication_9",
+          "collection_name": "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+          "distance": 0.32402294874191284,
+          "score": 0.44598192
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_6",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.4236062169075012,
+          "score": 0.31679183
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_49",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.42895394563674927,
+          "score": 0.2043419
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_200",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.4600410461425781,
+          "score": 0.13741668
+        }
+      ]
+    },
+    {
+      "sample_index": 14,
+      "company": "Airbus",
+      "question": "In Airbus's UK STEM education programme, what percentage of female students in the first cohort chose Triple Science GCSE in the 2024‑2025 academic year, and how does this compare with the previous year?",
+      "reference_answer": "55% in 2024‑2025, up from 36% in 2023‑2024",
+      "generated_answer": "In the first cohort of Airbus’s UK STEM programme, 55 % of female students chose Triple Science GCSE in the 2024‑2025 academic year – up from 36 % in the previous year (2023‑2024) [S1].",
+      "topic": "social",
+      "source_pdf": "src\\data\\scraped_pdfs\\airbus.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.45454545454545453,
+      "rouge2_f1": 0.2380952380952381,
+      "rougeL_f1": 0.45454545454545453,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "2025_Airbus_Pioneering_sustainable_aerospace_publication_18",
+          "collection_name": "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+          "distance": 0.3759365677833557,
+          "score": 0.9993563
+        },
+        {
+          "chunk_id": "2025_Airbus_Pioneering_sustainable_aerospace_publication_19",
+          "collection_name": "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+          "distance": 0.4334965944290161,
+          "score": 0.5071635
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_64",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.48481738567352295,
+          "score": 0.27318642
+        },
+        {
+          "chunk_id": "2025_Airbus_Pioneering_sustainable_aerospace_publication_10",
+          "collection_name": "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+          "distance": 0.45574551820755005,
+          "score": 0.059101548
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_94",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.5046025514602661,
+          "score": 0.053107902
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_95",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.5341864228248596,
+          "score": 0.032589745
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_188",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.5099802017211914,
+          "score": 0.025760558
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_145",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.45265865325927734,
+          "score": 0.021615334
+        }
+      ]
+    },
+    {
+      "sample_index": 15,
+      "company": "Airbus",
+      "question": "How many tonnes of carbon removal credits has Airbus agreed to purchase from 1PointFive?",
+      "reference_answer": "400,000 tonnes",
+      "generated_answer": "Airbus has agreed to purchase **400,000 tonnes** of carbon‑removal credits from 1PointFive【S1】.",
+      "topic": "other",
+      "source_pdf": "src\\data\\scraped_pdfs\\airbus.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.33333333333333337,
+      "rouge2_f1": 0.25,
+      "rougeL_f1": 0.33333333333333337,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "2025_Airbus_Pioneering_sustainable_aerospace_publication_9",
+          "collection_name": "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+          "distance": 0.43670183420181274,
+          "score": 0.9995178
+        },
+        {
+          "chunk_id": "2025_Airbus_Pioneering_sustainable_aerospace_publication_12",
+          "collection_name": "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+          "distance": 0.44213002920150757,
+          "score": 0.34986588
+        },
+        {
+          "chunk_id": "2025_Airbus_Pioneering_sustainable_aerospace_publication_13",
+          "collection_name": "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+          "distance": 0.40325772762298584,
+          "score": 0.3413629
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_64",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.4235456585884094,
+          "score": 0.20785716
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_46",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.5142077207565308,
+          "score": 0.078359805
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_63",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.47132283449172974,
+          "score": 0.05781161
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_219",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.5328626036643982,
+          "score": 0.051367506
+        },
+        {
+          "chunk_id": "sustainability-statement_59",
+          "collection_name": "sustainability_statement",
+          "distance": 0.4591017961502075,
+          "score": 0.0362883
+        }
+      ]
+    },
+    {
+      "sample_index": 16,
+      "company": "Danone",
+      "question": "What internal control framework does Danone use and which body monitors its effectiveness?",
+      "reference_answer": "Danone uses the DANgo framework, and the Audit Committee monitors its effectiveness.",
+      "generated_answer": "Danone’s internal‑control system is built on the **DANgo** (Danone Governing and Operating Processes) framework. Its effectiveness is overseen by the **Audit Committee**, which monitors the internal‑control and risk‑management systems【S1】.",
+      "topic": "governance",
+      "source_pdf": "src\\data\\scraped_pdfs\\danone.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.4782608695652174,
+      "rouge2_f1": 0.18181818181818182,
+      "rougeL_f1": 0.3478260869565218,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "urd2024accessibleversion_42",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.2659182548522949,
+          "score": 0.998862
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_43",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.2765358090400696,
+          "score": 0.97433734
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_355",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.321175754070282,
+          "score": 0.7182981
+        },
+        {
+          "chunk_id": "bnp_paribas_integrated_report_2024_en_bd_1_35",
+          "collection_name": "bnp_paribas_integrated_report_2024_en_bd_1",
+          "distance": 0.5824670791625977,
+          "score": 0.114368536
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_19",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.5231862664222717,
+          "score": 0.063134894
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_172",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.4898146986961365,
+          "score": 0.062331032
+        },
+        {
+          "chunk_id": "bnp_paribas_integrated_report_2024_en_bd_1_17",
+          "collection_name": "bnp_paribas_integrated_report_2024_en_bd_1",
+          "distance": 0.5772582292556763,
+          "score": 0.049130786
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_18",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.5505316257476807,
+          "score": 0.03963884
+        }
+      ]
+    },
+    {
+      "sample_index": 17,
+      "company": "Danone",
+      "question": "What proportion of Danone’s product volumes achieved a Health Star Rating of at least 3.5 stars in 2024, and what ranking did Danone receive in the Global Access to Nutrition index that year?",
+      "reference_answer": "87.7% of product volumes scored ≥3.5 stars, and Danone was ranked #1 in the 2024 Global Access to Nutrition index (ATNi).",
+      "generated_answer": "In 2024, 87.7 % of Danone’s product volumes earned a Health Star Rating of 3.5 stars or higher [​S1]. In the 2024 Access to Nutrition Global Index (ATNI), Danone was ranked second for the “Product Profile” sub‑category [​S2].",
+      "topic": "social",
+      "source_pdf": "src\\data\\scraped_pdfs\\danone.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.625,
+      "rouge2_f1": 0.3870967741935483,
+      "rougeL_f1": 0.5000000000000001,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "urd2024accessibleversion_439",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.2578471899032593,
+          "score": 0.99816847
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_440",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.2808172106742859,
+          "score": 0.99378294
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_340",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.30590325593948364,
+          "score": 0.8523219
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_255",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.4552544951438904,
+          "score": 0.073430054
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_145",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.46480417251586914,
+          "score": 0.0715912
+        },
+        {
+          "chunk_id": "bnp_paribas_integrated_report_2024_en_bd_1_13",
+          "collection_name": "bnp_paribas_integrated_report_2024_en_bd_1",
+          "distance": 0.5235626697540283,
+          "score": 0.07004896
+        },
+        {
+          "chunk_id": "bnp_paribas_integrated_report_2024_en_bd_1_10",
+          "collection_name": "bnp_paribas_integrated_report_2024_en_bd_1",
+          "distance": 0.526441216468811,
+          "score": 0.05749328
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_75",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.4841790199279785,
+          "score": 0.045183755
+        }
+      ]
+    },
+    {
+      "sample_index": 18,
+      "company": "Danone",
+      "question": "Which sustainability roadmap does Danone reference and what major B Corp milestone is it aiming for?",
+      "reference_answer": "Danone references the Danone Impact Journey and aims to become the largest B Corp in the world.",
+      "generated_answer": "Danone’s sustainability plan is built around its **Danone Impact Journey (DIJ)** – the company’s quantified roadmap for health‑through‑food, nature and people & communities 【S2】.  \n\nA key B‑Corp target is to **become the world’s largest B Corp**, with full global certification expected by 2025 【S1】【S3】.",
+      "topic": "taxonomy",
+      "source_pdf": "src\\data\\scraped_pdfs\\danone.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.3939393939393939,
+      "rouge2_f1": 0.21875000000000003,
+      "rougeL_f1": 0.33333333333333337,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "urd2024accessibleversion_10",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.3352682590484619,
+          "score": 0.9871788
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_4",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.3205745816230774,
+          "score": 0.9839091
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_162",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.3374478220939636,
+          "score": 0.7913377
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_44",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.5582091212272644,
+          "score": 0.034553625
+        },
+        {
+          "chunk_id": "sustainability-statement_3",
+          "collection_name": "sustainability_statement",
+          "distance": 0.5543501377105713,
+          "score": 0.018511046
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_41",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.5159186124801636,
+          "score": 0.016914913
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_35",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.5084370374679565,
+          "score": 0.01627746
+        },
+        {
+          "chunk_id": "bnp_paribas_integrated_report_2024_en_bd_1_6",
+          "collection_name": "bnp_paribas_integrated_report_2024_en_bd_1",
+          "distance": 0.5243391990661621,
+          "score": 0.014117893
+        }
+      ]
+    },
+    {
+      "sample_index": 19,
+      "company": "Danone",
+      "question": "Does the excerpt provide any quantitative data on Danone’s greenhouse gas emissions for 2024?",
+      "reference_answer": "No, the excerpt does not contain any quantitative information on Danone’s greenhouse gas emissions.",
+      "generated_answer": "Yes. The excerpt gives detailed 2024 figures, e.g.:\n\n* Gross scope 1 GHG emissions: 684,663 tCO₂e  \n* Gross location‑based scope 2 emissions: 694,742 tCO₂e  \n* Gross market‑based scope 2 emissions: 122,408 tCO₂e  \n* Total gross indirect (scope 3) emissions: 18,984,106 tCO₂e  \n* Total GHG emissions (location‑based): 20,363,560 tCO₂e  \n* Total GHG emissions (market‑based): 19,791,227 tCO₂e  \n* GHG intensity per net revenue (location‑based): 743.8 tCO₂e / million €  \n* GHG intensity per net revenue (market‑based): 722.9 tCO₂e / million €  \n\nThese numbers are shown in the Danone Universal Registration Document 2024 excerpt【S1】.",
+      "topic": "emissions",
+      "source_pdf": "src\\data\\scraped_pdfs\\danone.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.06611570247933884,
+      "rouge2_f1": 0.016806722689075633,
+      "rougeL_f1": 0.049586776859504134,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "urd2024accessibleversion_219",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.32064616680145264,
+          "score": 0.9773276
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_221",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.35335999727249146,
+          "score": 0.91117966
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_199",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.3514329195022583,
+          "score": 0.8529355
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_11",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.4782586693763733,
+          "score": 0.7394224
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_10",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.45799702405929565,
+          "score": 0.58118427
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_266",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.46006113290786743,
+          "score": 0.5790434
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_41",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.4484388828277588,
+          "score": 0.5181805
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_107",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.4747292995452881,
+          "score": 0.41750893
+        }
+      ]
+    },
+    {
+      "sample_index": 20,
+      "company": "Danone",
+      "question": "What was the total cost of Danone’s insurance premiums in 2024, broken down by global coverage, local coverage, and special risk coverage?",
+      "reference_answer": "€41 million for global coverage, €22 million for local coverage, and €7 million for special risk coverage, totaling €70 million.",
+      "generated_answer": "Danone’s insurance premiums totalled **€7 million in 2024**. The document only gives the overall amount and describes the types of risks covered (property damage, business interruption, civil liability, cyber, transportation, death/disability/education annuities, etc.), but it does **not provide a separate breakdown for global coverage, local coverage, and special‑risk coverage**. [S1]",
+      "topic": "other",
+      "source_pdf": "src\\data\\scraped_pdfs\\danone.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.32432432432432434,
+      "rouge2_f1": 0.19444444444444445,
+      "rougeL_f1": 0.2702702702702703,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "urd2024accessibleversion_48",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.28227490186691284,
+          "score": 0.9933589
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_300",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.36330950260162354,
+          "score": 0.7031419
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_221",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.3595311641693115,
+          "score": 0.52641886
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_111",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.5327938199043274,
+          "score": 0.10230471
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_441",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.4533970355987549,
+          "score": 0.073963374
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_29",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.5243386030197144,
+          "score": 0.06779314
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_42",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.47375988960266113,
+          "score": 0.055515114
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_396",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.4687715768814087,
+          "score": 0.049497053
+        }
+      ]
+    },
+    {
+      "sample_index": 21,
+      "company": "Engie",
+      "question": "What were Engie's total Group GHG emissions in 2024 and what is the 2030 target range for these emissions?",
+      "reference_answer": "Total Group GHG emissions were 157 Mt CO₂e in 2024, and the 2030 target range is 120 – 140 Mt CO₂e.",
+      "generated_answer": "Engie’s total Group GHG emissions in 2024 were **157 Mt CO₂e**.  \nThe 2030 target is expressed as a range of **120 – 140 Mt CO₂e**【S1】.",
+      "topic": "emissions",
+      "source_pdf": "src\\data\\scraped_pdfs\\engie.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.84,
+      "rouge2_f1": 0.5833333333333334,
+      "rougeL_f1": 0.7200000000000001,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_4",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.31849706172943115,
+          "score": 0.999445
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_5",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.30213528871536255,
+          "score": 0.98862445
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_12",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.31046056747436523,
+          "score": 0.9645224
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_42",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.4084632992744446,
+          "score": 0.95751673
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_266",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.417053759098053,
+          "score": 0.94796216
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_45",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.4488348960876465,
+          "score": 0.937669
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_50",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.3839600086212158,
+          "score": 0.9274948
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_44",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.4622851014137268,
+          "score": 0.9144437
+        }
+      ]
+    },
+    {
+      "sample_index": 22,
+      "company": "Engie",
+      "question": "Which committee within Engie's governance structure validates group policies related to nature challenges such as biodiversity and circular economy?",
+      "reference_answer": "The Executive Committee validates group policies relating to nature challenges.",
+      "generated_answer": "The **Executive Committee** validates the Group’s policies that address nature challenges such as biodiversity, water, pollution and the circular economy【S1】.",
+      "topic": "governance",
+      "source_pdf": "src\\data\\scraped_pdfs\\engie.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.5000000000000001,
+      "rouge2_f1": 0.26666666666666666,
+      "rougeL_f1": 0.5000000000000001,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_14",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.37251150608062744,
+          "score": 0.9957684
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_17",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.39452672004699707,
+          "score": 0.7550956
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_4",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.39435791969299316,
+          "score": 0.63635314
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_62",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.501400887966156,
+          "score": 0.093678005
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_107",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.46773403882980347,
+          "score": 0.057918087
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_14",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.4723910093307495,
+          "score": 0.04451443
+        },
+        {
+          "chunk_id": "sustainability-statement_77",
+          "collection_name": "sustainability_statement",
+          "distance": 0.5229176878929138,
+          "score": 0.043936532
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_247",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.4705035090446472,
+          "score": 0.04023794
+        }
+      ]
+    },
+    {
+      "sample_index": 23,
+      "company": "Engie",
+      "question": "What proportion of Engie's growth capital expenditure planned for 2025‑27 is aligned with the EU Taxonomy?",
+      "reference_answer": "Over 80% of the growth capex (specifically 82%) is aligned with the EU Taxonomy.",
+      "generated_answer": "Engie’s growth‑capex plan for 2025‑27 totals about €21‑24 billion, and more than 80 % of that spending is EU‑Taxonomy‑aligned – roughly 82 % of the growth capital expenditure is classified as taxonomy‑aligned【S1】.",
+      "topic": "taxonomy",
+      "source_pdf": "src\\data\\scraped_pdfs\\engie.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.39215686274509803,
+      "rouge2_f1": 0.20408163265306123,
+      "rougeL_f1": 0.23529411764705885,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_6",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.34572166204452515,
+          "score": 0.99497885
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_13",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.4014337658882141,
+          "score": 0.896614
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_148",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.4114198684692383,
+          "score": 0.8720208
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_77",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.45863229036331177,
+          "score": 0.7962924
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_151",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.4123286008834839,
+          "score": 0.7831604
+        },
+        {
+          "chunk_id": "sustainability-statement_26",
+          "collection_name": "sustainability_statement",
+          "distance": 0.4608004689216614,
+          "score": 0.70740473
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_150",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.40969496965408325,
+          "score": 0.6960617
+        },
+        {
+          "chunk_id": "sustainability-statement_25",
+          "collection_name": "sustainability_statement",
+          "distance": 0.44591963291168213,
+          "score": 0.6541219
+        }
+      ]
+    },
+    {
+      "sample_index": 24,
+      "company": "Engie",
+      "question": "What was the percentage of women in Engie's Group management in 2024, and what is the target range for 2030?",
+      "reference_answer": "Women made up 32% of Group management in 2024, with a 2030 target of 40%‑60%.",
+      "generated_answer": "In 2024, women made up **32 % of Engie’s Group management**.  \nThe company’s 2030 target is to raise this share to **between 40 % and 60 %**【S1】.",
+      "topic": "social",
+      "source_pdf": "src\\data\\scraped_pdfs\\engie.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.6046511627906976,
+      "rouge2_f1": 0.3414634146341463,
+      "rougeL_f1": 0.5116279069767441,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_2",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.38200128078460693,
+          "score": 0.9978677
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_4",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.3926594853401184,
+          "score": 0.99256825
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_5",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.3876797556877136,
+          "score": 0.9738444
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_188",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.389184832572937,
+          "score": 0.8842393
+        },
+        {
+          "chunk_id": "sustainability-statement_7",
+          "collection_name": "sustainability_statement",
+          "distance": 0.45550310611724854,
+          "score": 0.7999117
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_297",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.41942983865737915,
+          "score": 0.6286354
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_145",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.42112302780151367,
+          "score": 0.6260099
+        },
+        {
+          "chunk_id": "sustainability-statement_99",
+          "collection_name": "sustainability_statement",
+          "distance": 0.4387769103050232,
+          "score": 0.41721213
+        }
+      ]
+    },
+    {
+      "sample_index": 25,
+      "company": "Engie",
+      "question": "Since which year has Engie been partnered with the French Committee of the International Union for Conservation of Nature (IUCN) to integrate biodiversity into its activities?",
+      "reference_answer": "Engie has been partnered with the French Committee of the IUCN since 2008.",
+      "generated_answer": "Engie has been partnered with the French Committee of the International Union for Conservation of Nature (IUCN) since 2008 through a partnership agreement aimed at integrating biodiversity more fully into its activities【S1】.",
+      "topic": "biodiversity",
+      "source_pdf": "src\\data\\scraped_pdfs\\engie.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.5652173913043478,
+      "rouge2_f1": 0.5,
+      "rougeL_f1": 0.5652173913043478,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_16",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.36724066734313965,
+          "score": 0.99958104
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_17",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.42173266410827637,
+          "score": 0.966028
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_2",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.41736650466918945,
+          "score": 0.78365755
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_111",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.5005493760108948,
+          "score": 0.2776688
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_57",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.5277273058891296,
+          "score": 0.23633993
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_290",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.4660380482673645,
+          "score": 0.22592856
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_65",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.5141277313232422,
+          "score": 0.19620942
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_115",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.4845871329307556,
+          "score": 0.16776334
+        }
+      ]
+    },
+    {
+      "sample_index": 26,
+      "company": "Schneider Electric",
+      "question": "How many tonnes of CO₂ emissions does Schneider Electric claim to reduce annually by equipping the Kiefer photovoltaic park in Greece?",
+      "reference_answer": "150,000 tonnes",
+      "generated_answer": "Schneider Electric says that equipping the 110 MW Kiefer photovoltaic park in Vathylakkos, Kozani (Greece) reduces CO₂ emissions by **about 150,000 tonnes per year**【S1】.",
+      "topic": "emissions",
+      "source_pdf": "src\\data\\scraped_pdfs\\schneider-electric.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.20689655172413793,
+      "rouge2_f1": 0.14814814814814814,
+      "rougeL_f1": 0.20689655172413793,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "schneider-sustainability-impact-q3-2025-results_1",
+          "collection_name": "schneider_sustainability_impact_q3_2025_results",
+          "distance": 0.32189661264419556,
+          "score": 0.998835
+        },
+        {
+          "chunk_id": "schneider-sustainability-impact-q3-2025-results_0",
+          "collection_name": "schneider_sustainability_impact_q3_2025_results",
+          "distance": 0.4272720217704773,
+          "score": 0.76506716
+        },
+        {
+          "chunk_id": "schneider-sustainability-impact-q3-2025-results_2",
+          "collection_name": "schneider_sustainability_impact_q3_2025_results",
+          "distance": 0.4560684561729431,
+          "score": 0.4979248
+        },
+        {
+          "chunk_id": "sustainability-statement_39",
+          "collection_name": "sustainability_statement",
+          "distance": 0.432425856590271,
+          "score": 0.32487765
+        },
+        {
+          "chunk_id": "sustainability-statement_59",
+          "collection_name": "sustainability_statement",
+          "distance": 0.4688422679901123,
+          "score": 0.15778464
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_266",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.5151697397232056,
+          "score": 0.13580412
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_6",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.4816661477088928,
+          "score": 0.1284158
+        },
+        {
+          "chunk_id": "sustainability-statement_47",
+          "collection_name": "sustainability_statement",
+          "distance": 0.46582692861557007,
+          "score": 0.10539454
+        }
+      ]
+    },
+    {
+      "sample_index": 27,
+      "company": "Schneider Electric",
+      "question": "What type of assurance did Schneider Electric receive for SSI #8 in 2024?",
+      "reference_answer": "reasonable assurance",
+      "generated_answer": "Schneider Electric obtained a **reasonable assurance** for SSI #8 in 2024【S1】.",
+      "topic": "governance",
+      "source_pdf": "src\\data\\scraped_pdfs\\schneider-electric.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.2857142857142857,
+      "rouge2_f1": 0.16666666666666669,
+      "rougeL_f1": 0.2857142857142857,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "schneider-sustainability-impact-q3-2025-results_3",
+          "collection_name": "schneider_sustainability_impact_q3_2025_results",
+          "distance": 0.371027410030365,
+          "score": 0.9846347
+        },
+        {
+          "chunk_id": "schneider-sustainability-impact-q3-2025-results_2",
+          "collection_name": "schneider_sustainability_impact_q3_2025_results",
+          "distance": 0.43483656644821167,
+          "score": 0.7627777
+        },
+        {
+          "chunk_id": "schneider-sustainability-impact-q3-2025-results_1",
+          "collection_name": "schneider_sustainability_impact_q3_2025_results",
+          "distance": 0.44468390941619873,
+          "score": 0.4263216
+        },
+        {
+          "chunk_id": "sustainability-statement_175",
+          "collection_name": "sustainability_statement",
+          "distance": 0.5010013580322266,
+          "score": 0.31605253
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_100",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.5248446464538574,
+          "score": 0.05291181
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_36",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.5136061310768127,
+          "score": 0.051177494
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_441",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.5141406655311584,
+          "score": 0.034488525
+        },
+        {
+          "chunk_id": "sustainability-statement_6",
+          "collection_name": "sustainability_statement",
+          "distance": 0.4885331988334656,
+          "score": 0.033844035
+        }
+      ]
+    },
+    {
+      "sample_index": 28,
+      "company": "Schneider Electric",
+      "question": "What is Schneider Electric’s 2025 target for providing access to green electricity, and how many people had been reached by Q3 2025?",
+      "reference_answer": "Target: 50 million people; Reached by Q3 2025: 30 million people",
+      "generated_answer": "Schneider Electric aims to provide **green electricity to 50 million people by 2025**. By the end of Q3 2025 the company had already reached **about 30 million people**. 【S1】",
+      "topic": "taxonomy",
+      "source_pdf": "src\\data\\scraped_pdfs\\schneider-electric.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.5000000000000001,
+      "rouge2_f1": 0.2631578947368421,
+      "rougeL_f1": 0.45000000000000007,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "schneider-sustainability-impact-q3-2025-results_0",
+          "collection_name": "schneider_sustainability_impact_q3_2025_results",
+          "distance": 0.31398510932922363,
+          "score": 0.97644573
+        },
+        {
+          "chunk_id": "schneider-sustainability-impact-q3-2025-results_1",
+          "collection_name": "schneider_sustainability_impact_q3_2025_results",
+          "distance": 0.32011836767196655,
+          "score": 0.9530133
+        },
+        {
+          "chunk_id": "schneider-sustainability-impact-q3-2025-results_2",
+          "collection_name": "schneider_sustainability_impact_q3_2025_results",
+          "distance": 0.34835875034332275,
+          "score": 0.9079672
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_114",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.4744527339935303,
+          "score": 0.32380763
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_6",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.4250345826148987,
+          "score": 0.1480472
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_1",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.4250573515892029,
+          "score": 0.11971654
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_79",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.47622358798980713,
+          "score": 0.104294725
+        },
+        {
+          "chunk_id": "sustainability-statement_6",
+          "collection_name": "sustainability_statement",
+          "distance": 0.4201534390449524,
+          "score": 0.075995214
+        }
+      ]
+    },
+    {
+      "sample_index": 29,
+      "company": "Schneider Electric",
+      "question": "How many days of volunteering have Schneider Electric employees contributed in local communities since 2017?",
+      "reference_answer": "over 80,900 days",
+      "generated_answer": "Schneider Electric employees have contributed **over 80,900 days of volunteering** in their local communities since 2017【S1】.",
+      "topic": "social",
+      "source_pdf": "src\\data\\scraped_pdfs\\schneider-electric.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.3636363636363636,
+      "rouge2_f1": 0.3,
+      "rougeL_f1": 0.3636363636363636,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "schneider-sustainability-impact-q3-2025-results_2",
+          "collection_name": "schneider_sustainability_impact_q3_2025_results",
+          "distance": 0.38752293586730957,
+          "score": 0.99959713
+        },
+        {
+          "chunk_id": "schneider-sustainability-impact-q3-2025-results_0",
+          "collection_name": "schneider_sustainability_impact_q3_2025_results",
+          "distance": 0.3851928114891052,
+          "score": 0.81888163
+        },
+        {
+          "chunk_id": "schneider-sustainability-impact-q3-2025-results_1",
+          "collection_name": "schneider_sustainability_impact_q3_2025_results",
+          "distance": 0.4297269582748413,
+          "score": 0.7744129
+        },
+        {
+          "chunk_id": "sustainability-statement_101",
+          "collection_name": "sustainability_statement",
+          "distance": 0.4684973955154419,
+          "score": 0.6389479
+        },
+        {
+          "chunk_id": "sustainability-statement_123",
+          "collection_name": "sustainability_statement",
+          "distance": 0.5184345245361328,
+          "score": 0.2670257
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_254",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.5358116626739502,
+          "score": 0.09636511
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_125",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.5636508464813232,
+          "score": 0.026455775
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_114",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.5696099996566772,
+          "score": 0.022672437
+        }
+      ]
+    },
+    {
+      "sample_index": 30,
+      "company": "Schneider Electric",
+      "question": "How many suppliers have been assessed under Schneider Electric’s Vigilance Program as reported in Q3 2025?",
+      "reference_answer": "over 4,000 suppliers",
+      "generated_answer": "Schneider Electric reported that **more than 4,000 suppliers have been assessed under its Vigilance Program** in Q3 2025【S1】.",
+      "topic": "other",
+      "source_pdf": "src\\data\\scraped_pdfs\\schneider-electric.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.24999999999999997,
+      "rouge2_f1": 0.18181818181818182,
+      "rougeL_f1": 0.24999999999999997,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "schneider-sustainability-impact-q3-2025-results_1",
+          "collection_name": "schneider_sustainability_impact_q3_2025_results",
+          "distance": 0.3726792335510254,
+          "score": 0.9992084
+        },
+        {
+          "chunk_id": "schneider-sustainability-impact-q3-2025-results_0",
+          "collection_name": "schneider_sustainability_impact_q3_2025_results",
+          "distance": 0.40300464630126953,
+          "score": 0.7862948
+        },
+        {
+          "chunk_id": "schneider-sustainability-impact-q3-2025-results_2",
+          "collection_name": "schneider_sustainability_impact_q3_2025_results",
+          "distance": 0.4358472228050232,
+          "score": 0.78596646
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_101",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.44721436500549316,
+          "score": 0.77304506
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_117",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.480646550655365,
+          "score": 0.17781086
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_207",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.41132158041000366,
+          "score": 0.15278916
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_120",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.41129833459854126,
+          "score": 0.122838534
+        },
+        {
+          "chunk_id": "sustainability-statement_65",
+          "collection_name": "sustainability_statement",
+          "distance": 0.48484259843826294,
+          "score": 0.08694165
+        }
+      ]
+    },
+    {
+      "sample_index": 31,
+      "company": "L'Oreal",
+      "question": "What reduction target has L'Oréal set for Scope 1 and Scope 2 greenhouse gas emissions by 2030 compared with the 2019 baseline?",
+      "reference_answer": "57% reduction",
+      "generated_answer": "L’Oréal aims to cut its Scope 1 and Scope 2 greenhouse‑gas emissions by **57 % by 2030** relative to the 2019 baseline 【S1】【S2】【S3】.",
+      "topic": "emissions",
+      "source_pdf": "src\\data\\scraped_pdfs\\l-oreal.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.06896551724137931,
+      "rouge2_f1": 0.0,
+      "rougeL_f1": 0.06896551724137931,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_262",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.26027482748031616,
+          "score": 0.99945575
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_234",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.2804471254348755,
+          "score": 0.9989637
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_51",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.299138605594635,
+          "score": 0.99851626
+        },
+        {
+          "chunk_id": "sustainability-statement_41",
+          "collection_name": "sustainability_statement",
+          "distance": 0.41130465269088745,
+          "score": 0.9820826
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_50",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.4122256636619568,
+          "score": 0.9392481
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_41",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.41414451599121094,
+          "score": 0.9199307
+        },
+        {
+          "chunk_id": "sustainability-statement_42",
+          "collection_name": "sustainability_statement",
+          "distance": 0.4417574405670166,
+          "score": 0.8750414
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_414",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.4426875114440918,
+          "score": 0.8474635
+        }
+      ]
+    },
+    {
+      "sample_index": 32,
+      "company": "L'Oreal",
+      "question": "How many L'Oréal shares does the Chief Executive Officer, Nicolas Hieronimus, hold?",
+      "reference_answer": "232,428 shares",
+      "generated_answer": "Nicolas Hieronimus, L’Oréal’s Chief Executive Officer, holds **232,428 L’Oréal shares**【S1】.",
+      "topic": "governance",
+      "source_pdf": "src\\data\\scraped_pdfs\\l-oreal.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.3,
+      "rouge2_f1": 0.1111111111111111,
+      "rougeL_f1": 0.3,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_71",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.2673614025115967,
+          "score": 0.99338466
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_163",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.23351138830184937,
+          "score": 0.9901782
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_83",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.25898492336273193,
+          "score": 0.81077874
+        },
+        {
+          "chunk_id": "bnp_paribas_integrated_report_2024_en_bd_1_34",
+          "collection_name": "bnp_paribas_integrated_report_2024_en_bd_1",
+          "distance": 0.4856444001197815,
+          "score": 0.021615334
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_10",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.5891492366790771,
+          "score": 0.016090874
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_468",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.49137741327285767,
+          "score": 0.013584392
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_482",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.49176907539367676,
+          "score": 0.012771867
+        },
+        {
+          "chunk_id": "bnp_paribas_integrated_report_2024_en_bd_1_35",
+          "collection_name": "bnp_paribas_integrated_report_2024_en_bd_1",
+          "distance": 0.5117810964584351,
+          "score": 0.011463797
+        }
+      ]
+    },
+    {
+      "sample_index": 33,
+      "company": "L'Oreal",
+      "question": "Which board member represents employees on behalf of L'Oréal’s European Works Council and also serves on the Audit Committee?",
+      "reference_answer": "Benny de Vlieger, Director representing employees, member of the Audit Committee",
+      "generated_answer": "The provided excerpts list the two employee‑representatives on L’Oréal’s Board (Thierry Hamel and Benny de Vlieger) 【S1】, and they describe the composition of the Board’s Audit Committee, but they do not specify which, if any, of those employee‑representatives also sit on the Audit Committee. Therefore, the information needed to identify the employee‑representative who serves on the Audit Committee is not available in the given context.",
+      "topic": "social",
+      "source_pdf": "src\\data\\scraped_pdfs\\l-oreal.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.21686746987951808,
+      "rouge2_f1": 0.1234567901234568,
+      "rougeL_f1": 0.19277108433734935,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_10",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.35082077980041504,
+          "score": 0.9374402
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_59",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.3629676103591919,
+          "score": 0.9253649
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_56",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.36649149656295776,
+          "score": 0.9081302
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_477",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.4712349772453308,
+          "score": 0.5193385
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_455",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.47123390436172485,
+          "score": 0.15636237
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_162",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.5180639028549194,
+          "score": 0.047161866
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_179",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.523812472820282,
+          "score": 0.037397135
+        },
+        {
+          "chunk_id": "bnp_paribas_integrated_report_2024_en_bd_1_35",
+          "collection_name": "bnp_paribas_integrated_report_2024_en_bd_1",
+          "distance": 0.46879053115844727,
+          "score": 0.03234433
+        }
+      ]
+    },
+    {
+      "sample_index": 34,
+      "company": "L'Oreal",
+      "question": "What biodiversity-related target has L'Oréal set for all its industrial sites and buildings by 2030?",
+      "reference_answer": "All industrial sites and buildings operated by L’Oréal must have a positive impact on biodiversity compared with 2019",
+      "generated_answer": "L’Oréal’s target is that **by 2030 all of its industrial sites and buildings must have a positive impact on biodiversity compared with 2019** (measured by an improved site‑biodiversity score and achieving a 5/5 biodiversity‑culture level)【S1】.",
+      "topic": "biodiversity",
+      "source_pdf": "src\\data\\scraped_pdfs\\l-oreal.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.6129032258064516,
+      "rouge2_f1": 0.46666666666666673,
+      "rougeL_f1": 0.48387096774193544,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_51",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.2740134596824646,
+          "score": 0.9930962
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_234",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.2940801978111267,
+          "score": 0.9672869
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_288",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.31971603631973267,
+          "score": 0.92709976
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_15",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.4294360876083374,
+          "score": 0.79486305
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_62",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.4918200969696045,
+          "score": 0.53546286
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_244",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.48459839820861816,
+          "score": 0.45365515
+        },
+        {
+          "chunk_id": "bnp_paribas_integrated_report_2024_en_bd_1_39",
+          "collection_name": "bnp_paribas_integrated_report_2024_en_bd_1",
+          "distance": 0.4902859926223755,
+          "score": 0.387053
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_55",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.4885353446006775,
+          "score": 0.29350573
+        }
+      ]
+    },
+    {
+      "sample_index": 35,
+      "company": "L'Oreal",
+      "question": "What proportion of L'Oréal’s total 2024 investments was allocated to marketing investments?",
+      "reference_answer": "38%",
+      "generated_answer": "L’Oréal allocated **about 38 % of its total 2024 investments to marketing investments** (including moulds, point‑of‑sale advertising materials and stores)【S1】.",
+      "topic": "taxonomy",
+      "source_pdf": "src\\data\\scraped_pdfs\\l-oreal.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.07999999999999999,
+      "rouge2_f1": 0.0,
+      "rougeL_f1": 0.07999999999999999,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_50",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.31973809003829956,
+          "score": 0.99863297
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_44",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.33305734395980835,
+          "score": 0.9744834
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_45",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.33719784021377563,
+          "score": 0.9334308
+        },
+        {
+          "chunk_id": "bnp_paribas_integrated_report_2024_en_bd_1_13",
+          "collection_name": "bnp_paribas_integrated_report_2024_en_bd_1",
+          "distance": 0.5198826789855957,
+          "score": 0.29088014
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_149",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.5502671003341675,
+          "score": 0.27192786
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_45",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.6095960140228271,
+          "score": 0.22918998
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_57",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.5020827054977417,
+          "score": 0.203866
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_10",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.5340093374252319,
+          "score": 0.19868536
+        }
+      ]
+    },
+    {
+      "sample_index": 36,
+      "company": "Volkswagen",
+      "question": "Who has been appointed by the Supervisory Board of Volkswagen AG as the ESG officer?",
+      "reference_answer": "Mr. Hans Dieter Pötsch",
+      "generated_answer": "The Supervisory Board has appointed Mr Hans Dieter Pötsch as the ESG officer of Volkswagen AG【S1】.",
+      "topic": "governance",
+      "source_pdf": "src\\data\\scraped_pdfs\\volkswagen.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.4347826086956522,
+      "rouge2_f1": 0.38095238095238093,
+      "rougeL_f1": 0.4347826086956522,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_21",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.34520959854125977,
+          "score": 0.9992931
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_0",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.3798930048942566,
+          "score": 0.52340513
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_32",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.36617833375930786,
+          "score": 0.24908175
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_25",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.43268316984176636,
+          "score": 0.14426938
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_0",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.4228856563568115,
+          "score": 0.13106197
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_4",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.42749255895614624,
+          "score": 0.112015955
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_79",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.4861986041069031,
+          "score": 0.040313438
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_73",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.493704617023468,
+          "score": 0.037256766
+        }
+      ]
+    },
+    {
+      "sample_index": 37,
+      "company": "Volkswagen",
+      "question": "What were Volkswagen Group’s total location‑based greenhouse gas emissions in 2024?",
+      "reference_answer": "416.1 million tons of CO2e",
+      "generated_answer": "The provided excerpts do not contain a figure for Volkswagen Group’s total location‑based greenhouse‑gas emissions for 2024. The snippets list emissions for individual Scope 3 categories (e.g., upstream transportation, waste, business travel, etc.) and renewable‑energy targets, but no aggregate location‑based total is given. Therefore, the specific 2024 total cannot be determined from the available context.",
+      "topic": "emissions",
+      "source_pdf": "src\\data\\scraped_pdfs\\volkswagen.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.0,
+      "rouge2_f1": 0.0,
+      "rougeL_f1": 0.0,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_72",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.3223530650138855,
+          "score": 0.98934746
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_52",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.32216358184814453,
+          "score": 0.8949732
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_45",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.47560423612594604,
+          "score": 0.8446654
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_266",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.4368399977684021,
+          "score": 0.75868946
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_10",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.37468576431274414,
+          "score": 0.71611935
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_44",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.4830148220062256,
+          "score": 0.69575167
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_59",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.33404844999313354,
+          "score": 0.66823107
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_219",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.42082929611206055,
+          "score": 0.6406359
+        }
+      ]
+    },
+    {
+      "sample_index": 38,
+      "company": "Volkswagen",
+      "question": "How many ESRS subtopics did Volkswagen define as the binding basis for its materiality assessment?",
+      "reference_answer": "37 subtopics of the ESRS",
+      "generated_answer": "Volkswagen defined **37 ESRS subtopics** as the binding basis for its materiality assessment【S1】.",
+      "topic": "taxonomy",
+      "source_pdf": "src\\data\\scraped_pdfs\\volkswagen.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.4210526315789473,
+      "rouge2_f1": 0.0,
+      "rougeL_f1": 0.3157894736842105,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_24",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.28390586376190186,
+          "score": 0.999015
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_28",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.3028656244277954,
+          "score": 0.9849274
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_27",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.3670159578323364,
+          "score": 0.77696157
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_25",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.4039185643196106,
+          "score": 0.43050647
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_133",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.46934372186660767,
+          "score": 0.30197924
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_173",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.429789662361145,
+          "score": 0.2910816
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_132",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.48024070262908936,
+          "score": 0.27659282
+        },
+        {
+          "chunk_id": "sustainability-statement_172",
+          "collection_name": "sustainability_statement",
+          "distance": 0.48079806566238403,
+          "score": 0.23616375
+        }
+      ]
+    },
+    {
+      "sample_index": 39,
+      "company": "Volkswagen",
+      "question": "How many stakeholder groups has Volkswagen identified as the most important, and which two are placed at the centre of its stakeholder network?",
+      "reference_answer": "Ten groups, with employees and customers at the centre of the stakeholder network",
+      "generated_answer": "Volkswagen has identified **ten** stakeholder groups as the most important, and **employees and customers** are placed at the centre of its stakeholder network【S1】.",
+      "topic": "social",
+      "source_pdf": "src\\data\\scraped_pdfs\\volkswagen.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.6486486486486487,
+      "rouge2_f1": 0.3428571428571428,
+      "rougeL_f1": 0.5945945945945945,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_12",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.29445862770080566,
+          "score": 0.99828595
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_11",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.31759780645370483,
+          "score": 0.7636601
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_10",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.35945218801498413,
+          "score": 0.5189119
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_21",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.47110074758529663,
+          "score": 0.09057447
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_255",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.5481065511703491,
+          "score": 0.0128707485
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_324",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.49779897928237915,
+          "score": 0.012722708
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_254",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.5282372832298279,
+          "score": 0.012053779
+        },
+        {
+          "chunk_id": "bnp_paribas_integrated_report_2024_en_bd_1_19",
+          "collection_name": "bnp_paribas_integrated_report_2024_en_bd_1",
+          "distance": 0.46993929147720337,
+          "score": 0.011642224
+        }
+      ]
+    },
+    {
+      "sample_index": 40,
+      "company": "Volkswagen",
+      "question": "Beyond simply cutting emissions, what is the core objective of Volkswagen Group’s nature‑related sustainability strategy?",
+      "reference_answer": "To have a positive impact on people and the environment and to contribute to the restoration and improvement of ecosystems and living conditions through regenerative actions",
+      "generated_answer": "The core objective of Volkswagen Group’s nature‑related sustainability strategy is to go beyond emission cuts and create a **positive impact on people and the environment** by **restoring and improving ecosystems and living conditions through regenerative actions**【S1】【S2】.",
+      "topic": "biodiversity",
+      "source_pdf": "src\\data\\scraped_pdfs\\volkswagen.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.6666666666666667,
+      "rouge2_f1": 0.46875,
+      "rougeL_f1": 0.5757575757575758,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_7",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.20969772338867188,
+          "score": 0.99911696
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_29",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.26025474071502686,
+          "score": 0.9984692
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_30",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.27490371465682983,
+          "score": 0.91964257
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_14",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.42044925689697266,
+          "score": 0.3377494
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_41",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.44726186990737915,
+          "score": 0.15002882
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_44",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.4612104296684265,
+          "score": 0.0773781
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_1",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.46214884519577026,
+          "score": 0.07146149
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_25",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.43293702602386475,
+          "score": 0.06394842
+        }
+      ]
+    },
+    {
+      "sample_index": 41,
+      "company": "Siemens",
+      "question": "What were the total GHG removals and storage reported for Siemens' own operations and value chain in fiscal 2025?",
+      "reference_answer": "The total GHG removals and storage in own operations are 0 tCO2e and the total GHG removals and storage in the value chain are also 0 tCO2e.",
+      "generated_answer": "Siemens reported **zero** greenhouse‑gas removals and storage for both its own operations and its value chain (0 tCO₂e each) in the fiscal‑2025 reporting period【S1】.",
+      "topic": "emissions",
+      "source_pdf": "src\\data\\scraped_pdfs\\siemens.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.39999999999999997,
+      "rouge2_f1": 0.18867924528301885,
+      "rougeL_f1": 0.32727272727272727,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "sustainability-statement_59",
+          "collection_name": "sustainability_statement",
+          "distance": 0.2944428324699402,
+          "score": 0.99861145
+        },
+        {
+          "chunk_id": "sustainability-statement_51",
+          "collection_name": "sustainability_statement",
+          "distance": 0.2997826933860779,
+          "score": 0.9763557
+        },
+        {
+          "chunk_id": "sustainability-statement_38",
+          "collection_name": "sustainability_statement",
+          "distance": 0.31776726245880127,
+          "score": 0.96095175
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_78",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.43536269664764404,
+          "score": 0.9005298
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_45",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.4415024518966675,
+          "score": 0.7297124
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_44",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.43410760164260864,
+          "score": 0.629433
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_107",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.40058499574661255,
+          "score": 0.41667795
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_41",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.4331889748573303,
+          "score": 0.40533105
+        }
+      ]
+    },
+    {
+      "sample_index": 42,
+      "company": "Siemens",
+      "question": "Which internal carbon pricing schemes are currently in place at Siemens, and in which countries are they applied?",
+      "reference_answer": "Internal carbon pricing mechanisms are currently in place in the United Kingdom, Brazil, and Switzerland.",
+      "generated_answer": "Siemens currently operates three internal carbon‑pricing mechanisms:\n\n| Country | Scheme type | How it is applied |\n|---------|------------|-------------------|\n| United Kingdom | **Internal carbon fee** – charges Siemens businesses for fleet, non‑renewable site gas and electricity emissions (operations). | FY 2025 covered 2 043 tCO₂e (market‑based) and 1 808 tCO₂e (location‑based) at €100 / tCO₂e【S2】 |\n| Brazil | **Shadow pricing** – a shadow price guides capital‑expenditure decisions for new equipment, machinery or processes. | FY 2025 shadow price set at €208 / tCO₂e (no covered volume yet)【S2】 |\n| Switzerland | **Internal carbon fee** – a fee is added to unavoidable business air‑travel tickets to steer behaviour. | FY 2025 covered 983 tCO₂e at €75 / tCO₂e【S2】 |\n\nThese schemes are the only internal carbon‑pricing mechanisms Siemens reports as being in place today【S1】【S2】.",
+      "topic": "governance",
+      "source_pdf": "src\\data\\scraped_pdfs\\siemens.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.19310344827586207,
+      "rouge2_f1": 0.06993006993006992,
+      "rougeL_f1": 0.1103448275862069,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "sustainability-statement_59",
+          "collection_name": "sustainability_statement",
+          "distance": 0.30138736963272095,
+          "score": 0.9799382
+        },
+        {
+          "chunk_id": "sustainability-statement_60",
+          "collection_name": "sustainability_statement",
+          "distance": 0.26935356855392456,
+          "score": 0.96458924
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_46",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.48113900423049927,
+          "score": 0.51337117
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_47",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.38101518154144287,
+          "score": 0.3999874
+        },
+        {
+          "chunk_id": "sustainability-statement_49",
+          "collection_name": "sustainability_statement",
+          "distance": 0.3618241548538208,
+          "score": 0.29767406
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_80",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.42332184314727783,
+          "score": 0.074365705
+        },
+        {
+          "chunk_id": "schneider-sustainability-impact-q3-2025-results_1",
+          "collection_name": "schneider_sustainability_impact_q3_2025_results",
+          "distance": 0.5013625621795654,
+          "score": 0.02870708
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_12",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.48562586307525635,
+          "score": 0.022586042
+        }
+      ]
+    },
+    {
+      "sample_index": 43,
+      "company": "Siemens",
+      "question": "What is the target percentage for Robust Eco Design coverage of Siemens' relevant hardware, software and service portfolio by fiscal 2030, and what was the achieved percentage in fiscal 2025?",
+      "reference_answer": "Target for fiscal 2030 is 100%; the achieved percentage in fiscal 2025 was 67%.",
+      "generated_answer": "Siemens aims to have **Robust Eco‑Design applied to 100 % of its relevant hardware, software and service portfolio by fiscal 2030**. In fiscal 2025 the coverage had reached **67 %**. 【S1】【S2】",
+      "topic": "taxonomy",
+      "source_pdf": "src\\data\\scraped_pdfs\\siemens.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.35555555555555557,
+      "rouge2_f1": 0.13953488372093023,
+      "rougeL_f1": 0.26666666666666666,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "sustainability-statement_81",
+          "collection_name": "sustainability_statement",
+          "distance": 0.2726920247077942,
+          "score": 0.9999132
+        },
+        {
+          "chunk_id": "sustainability-statement_6",
+          "collection_name": "sustainability_statement",
+          "distance": 0.2624616026878357,
+          "score": 0.99793327
+        },
+        {
+          "chunk_id": "sustainability-statement_46",
+          "collection_name": "sustainability_statement",
+          "distance": 0.2955129146575928,
+          "score": 0.9850429
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_52",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.44941025972366333,
+          "score": 0.27076936
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_145",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.4382047653198242,
+          "score": 0.2639787
+        },
+        {
+          "chunk_id": "bnp_paribas_integrated_report_2024_en_bd_1_71",
+          "collection_name": "bnp_paribas_integrated_report_2024_en_bd_1",
+          "distance": 0.4673057198524475,
+          "score": 0.18683577
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_6",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.39775800704956055,
+          "score": 0.10123348
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_15",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.42061543464660645,
+          "score": 0.09351231
+        }
+      ]
+    },
+    {
+      "sample_index": 44,
+      "company": "Siemens",
+      "question": "How many total employees did Siemens report as of 30 September 2025, and what was the gender breakdown?",
+      "reference_answer": "Total employees: 317,562 (Male 223,708; Female 88,154; Other 129; Not reported 5,571).",
+      "generated_answer": "Siemens reported **317 562 employees** as of 30 September 2025. The gender breakdown was:\n\n- **Male:** 223 708  \n- **Female:** 88 154  \n- **Other:** 129  \n- **Not reported:** 5 571  \n\nSource: [S1]",
+      "topic": "social",
+      "source_pdf": "src\\data\\scraped_pdfs\\siemens.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.6818181818181818,
+      "rouge2_f1": 0.5714285714285714,
+      "rougeL_f1": 0.6363636363636364,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "sustainability-statement_106",
+          "collection_name": "sustainability_statement",
+          "distance": 0.24015623331069946,
+          "score": 0.99871576
+        },
+        {
+          "chunk_id": "sustainability-statement_107",
+          "collection_name": "sustainability_statement",
+          "distance": 0.2937862277030945,
+          "score": 0.98262435
+        },
+        {
+          "chunk_id": "sustainability-statement_99",
+          "collection_name": "sustainability_statement",
+          "distance": 0.3321601152420044,
+          "score": 0.55727315
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_95",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.39725327491760254,
+          "score": 0.25349122
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_112",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.4146019220352173,
+          "score": 0.16026603
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_84",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.44603240489959717,
+          "score": 0.122838534
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_188",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.4565247893333435,
+          "score": 0.112015955
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_94",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.3870939016342163,
+          "score": 0.06620602
+        }
+      ]
+    },
+    {
+      "sample_index": 45,
+      "company": "Siemens",
+      "question": "How many kilotonnes of CO2e of carbon credits did Siemens cancel in fiscal 2025, and what proportion of those came from removal projects?",
+      "reference_answer": "Siemens cancelled 2.0 ktCO2e of carbon credits in fiscal 2025, of which 57% (1.2 ktCO2e) were from removal projects.",
+      "generated_answer": "Siemens cancelled **2.0 kt CO₂e** of carbon credits in fiscal 2025. Of this amount, **57 % (1.2 kt CO₂e)** came from removal projects【S2】.",
+      "topic": "other",
+      "source_pdf": "src\\data\\scraped_pdfs\\siemens.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.7083333333333334,
+      "rouge2_f1": 0.5652173913043479,
+      "rougeL_f1": 0.7083333333333334,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "sustainability-statement_59",
+          "collection_name": "sustainability_statement",
+          "distance": 0.23921626806259155,
+          "score": 0.99921143
+        },
+        {
+          "chunk_id": "sustainability-statement_58",
+          "collection_name": "sustainability_statement",
+          "distance": 0.2590702772140503,
+          "score": 0.9989759
+        },
+        {
+          "chunk_id": "sustainability-statement_39",
+          "collection_name": "sustainability_statement",
+          "distance": 0.3383290767669678,
+          "score": 0.9667888
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_80",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.3755677342414856,
+          "score": 0.8601343
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_219",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.39718180894851685,
+          "score": 0.8362874
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_12",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.431485116481781,
+          "score": 0.6669308
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_220",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.4396778345108032,
+          "score": 0.46347457
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_42",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.45163244009017944,
+          "score": 0.28110948
+        }
+      ]
+    },
+    {
+      "sample_index": 46,
+      "company": "Iberdrola",
+      "question": "What CO2 emissions intensity target must Iberdrola achieve by 2025 under the Strategic Bonus, and what reduction percentage does this represent compared to its 2021 intensity?",
+      "reference_answer": "A level equal to or less than 70 g CO2/kWh, representing a 27% reduction compared to the 2021 specific CO2 emissions intensity.",
+      "generated_answer": "Iberdrola’s 2023‑2025 Strategic Bonus will be deemed achieved only if the company’s own CO₂‑emissions intensity falls to **≤ 70 g CO₂/kWh in 2025** (using a normal‑rainfall baseline). This corresponds to a **27 % reduction** compared with the Iberdrola Group’s specific CO₂‑emissions intensity in 2021【S1】.",
+      "topic": "emissions",
+      "source_pdf": "src\\data\\scraped_pdfs\\iberdrola.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.4054054054054054,
+      "rouge2_f1": 0.1388888888888889,
+      "rougeL_f1": 0.32432432432432434,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "IB_Sustainability_Report_30",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.3140544295310974,
+          "score": 0.99961853
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_31",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.30186980962753296,
+          "score": 0.9977393
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_49",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.3094167709350586,
+          "score": 0.90397453
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_41",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.3908035159111023,
+          "score": 0.87125593
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_6",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.3971732258796692,
+          "score": 0.8022459
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_107",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.4047577977180481,
+          "score": 0.5613651
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_54",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.4251420497894287,
+          "score": 0.3970029
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_4",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.42877548933029175,
+          "score": 0.3625177
+        }
+      ]
+    },
+    {
+      "sample_index": 47,
+      "company": "Iberdrola",
+      "question": "What weighting does the CO2 emissions intensity parameter have in the 2023‑2025 Strategic Bonus incentive scheme?",
+      "reference_answer": "10% weighting.",
+      "generated_answer": "The CO₂‑emissions‑intensity metric is weighted at **10 %** in the 2023‑2025 Strategic Bonus incentive scheme【S1】【S2】.",
+      "topic": "governance",
+      "source_pdf": "src\\data\\scraped_pdfs\\iberdrola.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.1904761904761905,
+      "rouge2_f1": 0.0,
+      "rougeL_f1": 0.09523809523809525,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "IB_Sustainability_Report_30",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.37763530015945435,
+          "score": 0.9946568
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_17",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.42674577236175537,
+          "score": 0.9685601
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_16",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.42354416847229004,
+          "score": 0.9601375
+        },
+        {
+          "chunk_id": "sustainability-statement_21",
+          "collection_name": "sustainability_statement",
+          "distance": 0.4386194944381714,
+          "score": 0.64332926
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_107",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.39996105432510376,
+          "score": 0.5026169
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_18",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.4114689826965332,
+          "score": 0.4833588
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_41",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.38874852657318115,
+          "score": 0.45768204
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_219",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.4089999198913574,
+          "score": 0.39291906
+        }
+      ]
+    },
+    {
+      "sample_index": 48,
+      "company": "Iberdrola",
+      "question": "Which practices does Iberdrola cite as supporting its continued classification in sustainability‑related indices and ratings?",
+      "reference_answer": "Transparency and disclosure of non‑financial information, together with excellence in maintaining the classification in sustainability‑related indices and ratings.",
+      "generated_answer": "Iberdrola points to a set of concrete environmental‑management and governance practices that it says underpin its ongoing inclusion in sustainability‑focused indices and ratings:\n\n* **A board‑approved Climate Action Plan** that sets a Net‑Zero‑by‑2040 ambition, SBTi‑validated targets and medium‑term intensity goals for electricity generation (e.g., ≤ 32 g CO₂/kWh by 2028) [S1].  \n* **ISO 14001 and EMAS certified Environmental Management Systems**, which in 2025 covered 94 % of the energy it produces and embed procedures for emissions control, regulatory compliance and impact prevention [S2].  \n* **Systematic pollution‑prevention actions** – e.g., spill‑containment systems, replacement of PCB‑containing transformers, use of less‑polluting oils and other measures to curb air, water and soil contamination [S2].  \n* **Alignment with EU pollution‑reduction objectives** and the adoption of quantitative metrics to track pollutant‑emission reductions [S2].  \n* **Human‑rights due‑diligence and stakeholder‑engagement processes** (including the B4SI model for community contributions) that are continuously reviewed and integrated into investment decisions [S3].\n\nThese practices are presented as the basis for Iberdrola’s continued recognition by sustainability‑related rating agencies and indices.",
+      "topic": "taxonomy",
+      "source_pdf": "src\\data\\scraped_pdfs\\iberdrola.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.10945273631840798,
+      "rouge2_f1": 0.04020100502512563,
+      "rougeL_f1": 0.06965174129353233,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "IB_Sustainability_Report_31",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.34989315271377563,
+          "score": 0.74632394
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_50",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.3192349076271057,
+          "score": 0.6788595
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_105",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.3479931950569153,
+          "score": 0.6042822
+        },
+        {
+          "chunk_id": "20250416%20-Engie%20-2024%20ESG%20at%20ENGIE_2",
+          "collection_name": "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+          "distance": 0.512748122215271,
+          "score": 0.05005131
+        },
+        {
+          "chunk_id": "bnp_paribas_integrated_report_2024_en_bd_1_11",
+          "collection_name": "bnp_paribas_integrated_report_2024_en_bd_1",
+          "distance": 0.5086026191711426,
+          "score": 0.03120282
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_78",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.47470295429229736,
+          "score": 0.02665774
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_39",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.514069676399231,
+          "score": 0.019124037
+        },
+        {
+          "chunk_id": "2024_Universal_Registration_Document_LOREAL_19",
+          "collection_name": "2024_Universal_Registration_Document_LOREAL",
+          "distance": 0.49434036016464233,
+          "score": 0.011244561
+        }
+      ]
+    },
+    {
+      "sample_index": 49,
+      "company": "Iberdrola",
+      "question": "Which sub‑topic was newly classified as material in the 2025 Double Materiality Assessment because it exceeded the established thresholds?",
+      "reference_answer": "Whistleblower protection.",
+      "generated_answer": "The sub‑topic **“Whistleblower protection”** was newly classified as material in the 2025 Double Materiality Assessment because it exceeded the established thresholds 【S1】【S2】.",
+      "topic": "social",
+      "source_pdf": "src\\data\\scraped_pdfs\\iberdrola.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.15384615384615385,
+      "rouge2_f1": 0.08333333333333333,
+      "rougeL_f1": 0.15384615384615385,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "IB_Sustainability_Report_24",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.4596460461616516,
+          "score": 0.9993175
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_23",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.4615134596824646,
+          "score": 0.96432143
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_28",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.42884117364883423,
+          "score": 0.90958625
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_40",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.46317702531814575,
+          "score": 0.8348113
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_58",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.5078708529472351,
+          "score": 0.8250265
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_175",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.49307453632354736,
+          "score": 0.7893961
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_13",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.5074512362480164,
+          "score": 0.7833262
+        },
+        {
+          "chunk_id": "urd2024accessibleversion_173",
+          "collection_name": "urd2024accessibleversion",
+          "distance": 0.45764100551605225,
+          "score": 0.7474317
+        }
+      ]
+    },
+    {
+      "sample_index": 50,
+      "company": "Iberdrola",
+      "question": "What hierarchy does Iberdrola apply systematically throughout the life cycle of projects to manage biodiversity impacts?",
+      "reference_answer": "The mitigation and conservation hierarchy (avoid, minimise, restore and compensate as a last resort).",
+      "generated_answer": "Iberdrola applies a **mitigation‑and‑conservation hierarchy** – avoid, minimise, restore and, only as a last resort, compensate – systematically across the entire life‑cycle of its projects [S1][S2].",
+      "topic": "biodiversity",
+      "source_pdf": "src\\data\\scraped_pdfs\\iberdrola.pdf",
+      "collections": [
+        "2024_Universal_Registration_Document_LOREAL",
+        "20250416_20_Engie_20_2024_20ESG_20at_20ENGIE",
+        "2025_Airbus_Pioneering_sustainable_aerospace_publication",
+        "IB_Sustainability_Report",
+        "airbnb_poster_updated_4b865bc6",
+        "bnp_paribas_integrated_report_2024_en_bd_1",
+        "esrs_sustainability_report_vw_ar24",
+        "schneider_sustainability_impact_q3_2025_results",
+        "sustainability_statement",
+        "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+        "urd2024accessibleversion"
+      ],
+      "rouge1_f1": 0.6666666666666666,
+      "rouge2_f1": 0.5,
+      "rougeL_f1": 0.5714285714285714,
+      "retrieved_chunk_count": 8,
+      "retrieved_chunks": [
+        {
+          "chunk_id": "IB_Sustainability_Report_62",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.3363332748413086,
+          "score": 0.9979493
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_63",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.33596736192703247,
+          "score": 0.99155444
+        },
+        {
+          "chunk_id": "IB_Sustainability_Report_56",
+          "collection_name": "IB_Sustainability_Report",
+          "distance": 0.34229469299316406,
+          "score": 0.8934954
+        },
+        {
+          "chunk_id": "sustainability-statement_15",
+          "collection_name": "sustainability_statement",
+          "distance": 0.46122121810913086,
+          "score": 0.22953519
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_86",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.49840104579925537,
+          "score": 0.20641373
+        },
+        {
+          "chunk_id": "esrs-sustainability-report-vw-ar24_107",
+          "collection_name": "esrs_sustainability_report_vw_ar24",
+          "distance": 0.46286922693252563,
+          "score": 0.14928317
+        },
+        {
+          "chunk_id": "totalenergies_sustainability-climate-2025-progress-report_2025_en_78",
+          "collection_name": "totalenergies_sustainability_climate_2025_progress_report_2025_en",
+          "distance": 0.4413405656814575,
+          "score": 0.14645308
+        },
+        {
+          "chunk_id": "bnp_paribas_integrated_report_2024_en_bd_1_55",
+          "collection_name": "bnp_paribas_integrated_report_2024_en_bd_1",
+          "distance": 0.519147515296936,
+          "score": 0.14596547
         }
       ]
     }
