@@ -178,18 +178,18 @@ The following controls are available under Advanced controls:
 - Embedding model (read-only)
 - Enable reranker (On/Off)
 - Reranker model (read-only)
-- Top K (per collection retrieval)
-- Final Top K (final chunk count after filtering)
+- Bi-encoder K (per collection retrieval)
+- Context K (final chunk count after filtering)
 - Reranker candidate pool (max candidates sent to reranker)
 - Min rerank score (chunks below this score are discarded)
 - System prompt
 
 Default values used by Reset settings:
 
-- `Top K = 3`
-- `Final Top K = 8`
-- `Reranker candidate pool = 24`
-- `Min rerank score = 0.25`
+- `Bi-encoder K = 10`
+- `Context K = 50`
+- `Reranker candidate pool = 60`
+- `Min rerank score = 0.1`
 - `System prompt = DEFAULT_SYSTEM_PROMPT`
 - `Reranker backend/model = config defaults`
 - `Embedding model = config default`

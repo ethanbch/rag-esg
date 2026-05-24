@@ -40,11 +40,11 @@ def _render_header() -> None:
         st.metric("Scope", f"{selected_collection_count} selected")
     with status_col_2:
         st.metric(
-            "Top K",
+            "Bi-encoder K",
             f"{int(st.session_state.n_results_per_collection)} / collection",
         )
     with status_col_3:
-        st.metric("Final Top K", f"{int(st.session_state.max_chunks)} chunks")
+        st.metric("Context K", f"{int(st.session_state.max_chunks)} chunks")
     with status_col_4:
         st.metric("Reranker", "On" if reranker_enabled else "Off")
 
@@ -178,16 +178,16 @@ def _render_sidebar() -> None:
             )
 
             st.session_state.n_results_per_collection = st.slider(
-                "Top K",
+                "Bi-encoder K / collection",
                 min_value=1,
-                max_value=10,
+                max_value=20,
                 value=int(st.session_state.n_results_per_collection),
                 help="Number of chunks retrieved per collection before reranking.",
             )
             st.session_state.max_chunks = st.slider(
-                "Final Top K",
+                "Context window (chunks → LLM)",
                 min_value=1,
-                max_value=30,
+                max_value=100,
                 value=int(st.session_state.max_chunks),
                 help="Number of chunks kept for final context after reranking/sorting.",
             )
