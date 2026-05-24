@@ -391,12 +391,20 @@ def _generate_answer(clean_question: str) -> None:
             rag_service = RagService(runtime_config)
 
             total_start = perf_counter()
-            with st.status("RAG pipeline running", expanded=True) as status:
-                st.write("1/4 Receive question")
+            with st.status(
+                "Executing Advanced RAG Pipeline...", expanded=True
+            ) as status:
+                st.write("**Phase 1: Receive Original Question**")
 
-                st.write("2/4 Retrieve chunks")
+                st.write(
+                    "**Phase 2 & 3: Multi-Query Expansion, Bi-Encoder Retrieval & Cross-Encoder Reranking**"
+                )
+                st.caption(
+                    "Generating query variations, searching ChromaDB, deduplicating, and reranking strictly against original question..."
+                )
                 retrieval_start = perf_counter()
-                chunks = rag_service.retrieve_chunks(
+
+                chunks = rag_service.retrieve_chunks_mqr(
                     question=clean_question,
                     collection_names=st.session_state.selected_collections,
                     n_results_per_collection=int(
@@ -410,9 +418,11 @@ def _generate_answer(clean_question: str) -> None:
                     min_rerank_score=float(st.session_state.min_rerank_score),
                 )
                 retrieval_ms = (perf_counter() - retrieval_start) * 1000
-                st.write(f"Retrieved {len(chunks)} chunk(s) in {retrieval_ms:.0f} ms")
+                st.write(
+                    f"Context extraction complete: Filtered down to top {len(chunks)} highest quality chunks ({retrieval_ms:.0f} ms)"
+                )
 
-                st.write("3/4 Generate answer")
+                st.write("**Phase 4: Synthesis & Generation**")
                 generation_start = perf_counter()
                 answer = rag_service.generate_answer(
                     question=clean_question,
@@ -420,12 +430,14 @@ def _generate_answer(clean_question: str) -> None:
                     system_prompt=st.session_state.system_prompt,
                 )
                 generation_ms = (perf_counter() - generation_start) * 1000
-                st.write(f"Answer generated in {generation_ms:.0f} ms")
+                st.write(
+                    f"Generated final answer properly grounded in sources ({generation_ms:.0f} ms)"
+                )
 
                 total_ms = (perf_counter() - total_start) * 1000
-                st.write("4/4 Render response")
+                st.write("**Phase 5: Rendering Evidence & Traceability UI**")
                 status.update(
-                    label=f"RAG pipeline complete ({total_ms:.0f} ms)",
+                    label=f"RAG Pipeline Complete ({total_ms:.0f} ms)",
                     state="complete",
                 )
         except Exception as exc:

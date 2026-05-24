@@ -16,6 +16,8 @@ wheels/
 # Local vector store
 chroma_db/
 chroma_db_backup/
+chroma_db_backup2/
+
 
 
 # Generated analysis artifacts

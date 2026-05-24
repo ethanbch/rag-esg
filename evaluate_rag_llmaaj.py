@@ -14,8 +14,8 @@ from rag_app.service import DEFAULT_CHAT_MODEL, RagRuntimeConfig, RagService
 
 DEFAULT_DATASET = Path("evaluation/rag_evaluation_dataset.csv")
 DEFAULT_OUTPUT = Path("evaluation/last_eval_report_llm.json")
-DEFAULT_TOP_K = 5
-DEFAULT_MAX_CHUNKS = 12
+DEFAULT_TOP_K = 10
+DEFAULT_MAX_CHUNKS = 50
 DEFAULT_JUDGE_MODEL = os.getenv("JUDGE_MODEL", DEFAULT_CHAT_MODEL)
 
 

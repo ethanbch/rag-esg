@@ -40,8 +40,8 @@ def _initialize_state() -> None:
         "embedding_model": EMBEDDING_MODEL,
         "reranker_backend": RERANK_BACKEND,
         "reranker_model": RERANK_MODEL,
-        "n_results_per_collection": 5,
-        "max_chunks": 12,
+        "n_results_per_collection": 10,
+        "max_chunks": 50,
         "reranker_candidate_pool": 60,
         "min_rerank_score": 0.1,
         "queued_prompt": None,
@@ -69,8 +69,8 @@ def _reset_advanced_settings() -> None:
     st.session_state.embedding_model = EMBEDDING_MODEL
     st.session_state.reranker_backend = default_reranker_backend
     st.session_state.reranker_model = RERANK_MODEL
-    st.session_state.n_results_per_collection = 5
-    st.session_state.max_chunks = 12
+    st.session_state.n_results_per_collection = 10
+    st.session_state.max_chunks = 50
     st.session_state.reranker_candidate_pool = 60
     st.session_state.min_rerank_score = 0.1
     st.session_state.system_prompt = DEFAULT_SYSTEM_PROMPT

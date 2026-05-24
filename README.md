@@ -29,17 +29,91 @@ Main use cases:
 - Prompt and retrieval parameter experimentation
 - Lightweight automatic evaluation with ROUGE metrics
 
+## Architecture & Pipeline
+
+```mermaid
+flowchart TB
+    %% Colors & Styles
+    classDef db fill:#e1bee7,stroke:#8e24aa,stroke-width:2px,color:#000000;
+    classDef process fill:#bbdefb,stroke:#1976d2,stroke-width:1px,color:#000000;
+    classDef llm fill:#fff9c4,stroke:#fbc02d,stroke-width:2px,color:#000000;
+    classDef user fill:#c8e6c9,stroke:#388e3c,stroke-width:2px,color:#000000;
+    %% PART 1: INGESTION (Offline)
+    subgraph Ingestion["Document Ingestion Pipeline (ingestion_pipeline/)"]
+        direction LR
+        S0[Scraping / Collection<br/>step00] --> S1[Text Parsing<br/>step01]
+        S1 --> S2[Strategic Chunking<br/>step02]
+        S2 --> S3[Bi-Encoder Embedding<br/>step03]
+        S3 --> DB[(ChromaDB<br/>Vector Store)]
+    end
+
+    class S0,S1,S2,S3 process;
+    class DB db;
+
+    %% PART 2: QUERYING (Online / RAG App)
+    subgraph RAG["Retrieval-Augmented Generation RAG (rag_app/service.py)"]
+        direction TB
+
+        UI((User<br/>Streamlit UI)) -->|Asks a question| Q_Orig[Original Question]
+
+        %% Phase 1: Expansion
+        subgraph MQR["Phase 1: Multi-Query Expansion"]
+            Q_Orig --> LLM_MQR{LLM Albert}
+            LLM_MQR -->|Generates| Q_Alt1[Alt. Question 1]
+            LLM_MQR -->|Generates| Q_Alt2[Alt. Question 2]
+            LLM_MQR -->|Generates| Q_AltN[Alt. Question N]
+        end
+
+        %% Phase 2: Bi-Encoder
+        subgraph Retrieval["Phase 2: Fast Retrieval (Bi-Encoder BGE-M3)"]
+            Q_Orig -.-> VSearch[Vector Search<br/>Reranker Disabled]
+            Q_Alt1 -.-> VSearch
+            Q_Alt2 -.-> VSearch
+            Q_AltN -.-> VSearch
+            VSearch <==> DB
+            VSearch --> Pool[Large Pool of<br/>Raw Chunks]
+        end
+
+        %% Phase 3: Cross-Encoder
+        subgraph Reranking["Phase 3: Deduplication & Fine Reranking (Cross-Encoder)"]
+            Pool --> Dedup[Strict Deduplication<br/>by Chunk ID]
+            Dedup --> Chunks_U[Unique Chunks]
+            Chunks_U --> CrossEnc{Reranker API}
+            Q_Orig -.->|Exclusive Reference| CrossEnc
+            CrossEnc --> Filter[Minimum Score Filtering<br/>& Top-K Max]
+            Filter --> Context[Final High-Quality<br/>Context]
+        end
+
+        %% Phase 4: Generation
+        subgraph Generation["Phase 4: Synthesis"]
+            Context --> BuildPrompt[Prompt Assembly<br/>System + Context]
+            Q_Orig --> BuildPrompt
+            BuildPrompt --> LLM_Gen{LLM Albert 120b}
+            LLM_Gen --> Answer[Final Answer]
+        end
+    end
+
+    Answer --> UI
+
+    class BuildPrompt,VSearch,Dedup,Filter,Pool,Chunks_U,Context process;
+    class LLM_MQR,LLM_Gen,CrossEnc llm;
+    class UI,Answer user;
+
+    %% Cross-graph link for readability
+    Ingestion ~~~ RAG
+```
+
 ## Core RAG Flow
 
-At query time, the app executes:
+At query time, the app executes the following robust pipeline:
 
-1. Receive question
-2. Retrieve Top K chunks per selected collection
-3. Optionally rerank candidates with API reranker
-4. Drop chunks below minimum rerank score
-5. Keep Final Top K chunks
-6. Generate answer from the filtered context
-7. Render answer + evidence chunks + optional highlighted PDF pages
+1. **Multi-Query Retrieval (MQR)**: Generate diverse semantic variations of the original question.
+2. **Fast Bi-Encoder Retrieval**: Retrieve a large pool of Top K chunks for _all_ query variations (Reranker is disabled here for speed and recall).
+3. **Deduplication**: Keep only unique chunks based on their ID.
+4. **Cross-Encoder Reranking**: Re-evaluate the entire deduped pool strictly against the _original question_.
+5. **Score Filtering**: Drop chunks below the minimum rerank score.
+6. **Final Generation**: Generate the answer from the filtered, high-quality context chunks.
+7. **Traceability UI**: Render the answer alongside evidence chunks and optional highlighted PDF pages.
 
 ## Quick Start
 
@@ -68,7 +142,7 @@ Optional variables are listed in the Configuration section.
 ### 4) Run ingestion (local PDF folder)
 
 ```bash
-uv run main.py
+uv run python -m ingestion_pipeline.main
 ```
 
 This indexes PDFs from `downloads/` into local ChromaDB.
@@ -156,17 +230,27 @@ SENTENCE_CHUNK_SIZE=8
 SENTENCE_CHUNK_OVERLAP=2
 ```
 
-## Evaluation (ROUGE)
+## Evaluation
 
-Run automatic evaluation:
+### ROUGE Metrics
+
+Run automatic basic evaluation using ROUGE (token overlap):
 
 ```bash
 uv run evaluate_rag.py --dataset evaluation/qa_dataset.example.json --output evaluation/last_eval_report.json
 ```
 
-The report includes:
+### LLM-as-a-judge
 
-- Per-sample ROUGE-1/2/L F1
+For a deeper semantic evaluation assessing correctness, relevance, and groundedness of the generation:
+
+```bash
+uv run evaluate_rag_llmaaj.py --dataset evaluation/qa_dataset.example.json --output evaluation/last_eval_report_llm.json
+```
+
+Evaluation reports include:
+
+- Per-sample scores (ROUGE / LLM judgments)
 - Aggregated averages
 - Retrieved chunk metadata
 
@@ -177,10 +261,12 @@ Tip: prefer the one-line command above to avoid shell line-break issues.
 ```text
 .
 ├── config.py
-├── main.py
 ├── evaluate_rag.py
+├── evaluate_rag_llmaaj.py
+├── pyproject.toml
 ├── streamlit_app.py
 ├── ingestion_pipeline/
+│   ├── main.py
 │   ├── step00_scraping.py
 │   ├── step01_parsing.py
 │   ├── step02_chunking.py
@@ -191,9 +277,12 @@ Tip: prefer the one-line command above to avoid shell line-break issues.
 │   ├── retriever.py
 │   ├── service.py
 │   └── types.py
+├── streamlit_ui/
+│   └── ui.py
 ├── evaluation/
 │   ├── qa_dataset.example.json
-│   └── last_eval_report.json
+│   ├── last_eval_report.json
+│   └── last_eval_report_llm.json
 └── chroma_db/
 ```
 
@@ -216,7 +305,7 @@ uv run evaluate_rag.py --dataset evaluation/qa_dataset.example.json --output eva
 Run ingestion first:
 
 ```bash
-uv run main.py
+uv run python -m ingestion_pipeline.main
 ```
 
 ### Too many irrelevant chunks
