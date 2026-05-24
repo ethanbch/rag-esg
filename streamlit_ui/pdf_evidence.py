@@ -8,7 +8,7 @@ from typing import Any
 import streamlit as st
 
 from .state import (
-    _build_highlight_query,
+    _build_highlight_queries,
     _resolve_pdf_source_for_chunks,
     _select_primary_pdf_filename,
 )
@@ -16,6 +16,10 @@ from .state import (
 
 def _search_rects_with_fallback(page: Any, query: str) -> list[Any]:
     normalized = re.sub(r"\s+", " ", query).strip()
+    # Normalise les caractères typographiques fréquents dans les PDF
+    normalized = (
+        normalized.replace("\u00a0", " ").replace("\u2011", "-").replace("\u2019", "'")
+    )
     if not normalized:
         return []
 
@@ -31,7 +35,8 @@ def _search_rects_with_fallback(page: Any, query: str) -> list[Any]:
         if not candidate or candidate in seen:
             continue
         seen.add(candidate)
-        rects = page.search_for(candidate)
+        # Recherche insensible à la casse et force quads=False
+        rects = page.search_for(candidate, quads=False)
         if rects:
             return rects
 
@@ -119,16 +124,40 @@ def _render_pdf_evidence_for_chunks(
             st.info("Install pymupdf to display highlighted PDF evidence.")
         return
 
+    question = ""
+    chat_messages = st.session_state.get("chat_messages", [])
+    for i in range(len(chat_messages) - 1, -1, -1):
+        if (
+            chat_messages[i].get("role") == "assistant"
+            and chat_messages[i].get("chunks") is chunks
+        ):
+            if i > 0 and chat_messages[i - 1].get("role") == "user":
+                question = str(chat_messages[i - 1].get("content", ""))
+            break
+    if not question:
+        for m in reversed(chat_messages):
+            if m.get("role") == "user":
+                question = str(m.get("content", ""))
+                break
+
     page_queries: dict[int, list[str]] = defaultdict(list)
     unscoped_queries: list[str] = []
     for chunk in chunks:
         metadata = (
             chunk.get("metadata") if isinstance(chunk.get("metadata"), dict) else {}
         )
-        query = str(metadata.get("highlight_query", "")).strip()
-        if not query:
-            query = _build_highlight_query(str(chunk.get("content", "")))
-        if not query:
+        queries = []
+        highlight_query = str(metadata.get("highlight_query", "")).strip()
+        if highlight_query:
+            queries.append(highlight_query)
+        else:
+            queries.extend(
+                _build_highlight_queries(
+                    str(chunk.get("content", "")), question=question
+                )
+            )
+
+        if not queries:
             continue
 
         page_number_raw = metadata.get("page_number")
@@ -138,9 +167,9 @@ def _render_pdf_evidence_for_chunks(
             page_number = None
 
         if isinstance(page_number, int) and page_number > 0:
-            page_queries[page_number].append(query)
+            page_queries[page_number].extend(queries)
         else:
-            unscoped_queries.append(query)
+            unscoped_queries.extend(queries)
 
     if not page_queries and not unscoped_queries:
         return

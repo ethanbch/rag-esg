@@ -120,12 +120,43 @@ def _build_upload_collection_name(filename: str, pdf_bytes: bytes) -> str:
     return _sanitize_collection_name(f"{base}_{digest}")
 
 
-def _build_highlight_query(text: str) -> str:
+def _build_highlight_queries(text: str, question: str = "") -> list[str]:
+    """Retourne plusieurs phrases candidates à surligner depuis un chunk."""
     normalized = re.sub(r"\s+", " ", text).strip()
-    words = normalized.split()
-    if not words:
-        return ""
-    return " ".join(words[:24])
+    if not normalized:
+        return []
+
+    # Découpe en phrases
+    sentences = re.split(r"(?<=[.!?])\s+|(?<=;)\s+|(?<=\n)•\s*", normalized)
+    question_words = set(re.findall(r"\w{4,}", question.lower()))
+
+    scored = []
+    for s in sentences:
+        s = s.strip().lstrip("•·-– ")
+        words = s.split()
+        if len(words) < 3 or len(words) > 25:
+            continue
+        # Score: mots en commun avec la question + bonus si chiffre
+        overlap = sum(
+            1 for w in re.findall(r"\w{4,}", s.lower()) if w in question_words
+        )
+        has_number = bool(re.search(r"\d", s))
+        score = overlap * 2 + (1 if has_number else 0)
+        scored.append((score, len(words), " ".join(words[:16])))
+
+    scored.sort(key=lambda x: (-x[0], x[1]))
+
+    seen = set()
+    out = []
+    for _, _, phrase in scored:
+        if phrase not in seen:
+            seen.add(phrase)
+            out.append(phrase)
+        if len(out) >= 5:
+            break
+
+    # Fallback
+    return out or [" ".join(normalized.split()[:12])]
 
 
 def _ingest_uploaded_pdf(uploaded_file: Any) -> tuple[str, int, int]:
